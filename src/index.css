@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom architectural scrollbar & helpers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121714;
+}
+::-webkit-scrollbar-thumb {
+  background: #0D6838;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #107C41;
+}
+
+.architectural-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(13, 104, 56, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 104, 56, 0.05) 1px, transparent 1px);
+}
+
+.architectural-grid-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
