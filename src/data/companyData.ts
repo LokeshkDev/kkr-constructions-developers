@@ -39,9 +39,9 @@ export const COMPANY_INFO = {
   address: "PLOT NO - 73, SAI GARDEN, THIRUVALLUR - 631 203.",
   phones: [
     "+91 80721 83386",
+    "+91 75503 31045",
     "+91 98948 68457",
     "+91 80989 87756",
-    "+91 75503 31045"
   ],
   story: `KKR Construction & Developers is a real-estate development and construction company that focuses on residential and commercial building projects. Established with the aim of delivering quality construction and satisfying customers through professional engineering and design services, the firm's roots trace back to around 2024, founded by Mr. Mohan Ram who has over 8 years of experience in the construction industry. He and his partners Mr. Thangavel (13 years experience) and Mr. Pradeep (8 years experience) are civil engineering professionals who manage the firm with technical expertise and a client-focused approach.`,
   vision: "To be a trusted and professional construction and real-estate developer, delivering structurally strong buildings, technical excellence and long-term value.",
@@ -70,17 +70,23 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: "Mr. Thangavel",
-    role: "Civil Engineering Professional",
+    role: "Managing Partner - Civil Engineering Professional",
     experience: "13 Years Experience",
     description: "Brings 13 years of civil engineering professional expertise to manage complex structural projects and ensure precision engineering standards."
   },
   {
     name: "Mr. Pradeep",
-    role: "Civil Engineering Professional",
+    role: "Managing Partner - Civil Engineering Professional",
     experience: "8 Years Experience",
     description: "Civil engineering professional with 8 years of experience overseeing site operations, project execution, and client satisfaction."
+  },
+  {
+    name: "Mr. Karthick",
+    role: "Business Executive Management",
+    experience: "8 Years Experience",
+    description: "Business executive with 8 years of experience in managing client relations, project coordination, and operational efficiency for construction projects."
   }
-];
+]
 
 export const SERVICES: ServiceItem[] = [
   {

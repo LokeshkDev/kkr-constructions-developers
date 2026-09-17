@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, Check, ExternalLink, Filter, X } from 'lucide-react';
 import { PROJECTS_DATA, PROJECT_CATEGORIES, COMPANY_INFO, ProjectItem } from '../data/companyData';
 
@@ -37,25 +37,25 @@ export const ProjectsAndContactSection: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-24 bg-white text-brand-charcoal relative">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-white text-brand-charcoal relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Gallery Header */}
-        <div className="max-w-3xl space-y-4 mb-12">
+        <div className="max-w-3xl space-y-3 mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-lightGreen text-brand-green text-xs font-bold uppercase tracking-wider border border-brand-green/20">
             <span>Portfolio of Work</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-brand-charcoal tracking-tight">
             Where Vision Meets Reality: Our Project Showcase
           </h2>
-          <p className="text-gray-600 text-base">
+          <p className="text-gray-600 text-base sm:text-lg">
             Authentic field photographs and engineering work labels representing our concrete, structural, and building execution.
           </p>
-          <div className="w-16 h-1 bg-brand-green rounded"></div>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-brand-green to-brand-gold rounded-full"></div>
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
+        <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar">
           <div className="flex items-center gap-1.5 text-xs text-gray-500 font-semibold mr-2 shrink-0">
             <Filter className="w-3.5 h-3.5 text-brand-green" />
             <span>Filter:</span>
@@ -76,7 +76,7 @@ export const ProjectsAndContactSection: React.FC = () => {
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mb-12 sm:mb-16">
           {filteredProjects.map((project) => (
             <div 
               key={project.id}
@@ -165,12 +165,12 @@ export const ProjectsAndContactSection: React.FC = () => {
         )}
 
         {/* Integrated Contact Section */}
-        <div id="contact" className="pt-16 border-t border-gray-200">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div id="contact" className="pt-10 sm:pt-14 border-t border-gray-200">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             
             {/* Left Column: Direct Contact Info */}
-            <div className="lg:col-span-5 space-y-8">
-              <div className="space-y-4">
+            <div className="lg:col-span-5 space-y-6">
+              <div className="space-y-3">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-wider border border-brand-gold/20">
                   <span>Get In Touch</span>
                 </div>
@@ -183,11 +183,11 @@ export const ProjectsAndContactSection: React.FC = () => {
               </div>
 
               {/* Direct Info Cards */}
-              <div className="space-y-4">
+              <div className="space-y-3.5">
                 
                 {/* Phone Numbers */}
-                <div className="p-5 rounded-xl bg-brand-offWhite border border-gray-200 flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-brand-green/10 text-brand-green shrink-0">
+                <div className="p-4 sm:p-5 rounded-xl bg-brand-offWhite border border-gray-200 flex items-start gap-3.5">
+                  <div className="p-2.5 rounded-lg bg-brand-green/10 text-brand-green shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -207,8 +207,8 @@ export const ProjectsAndContactSection: React.FC = () => {
                 </div>
 
                 {/* Email Address */}
-                <div className="p-5 rounded-xl bg-brand-offWhite border border-gray-200 flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-brand-green/10 text-brand-green shrink-0">
+                <div className="p-4 sm:p-5 rounded-xl bg-brand-offWhite border border-gray-200 flex items-start gap-3.5">
+                  <div className="p-2.5 rounded-lg bg-brand-green/10 text-brand-green shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -223,8 +223,8 @@ export const ProjectsAndContactSection: React.FC = () => {
                 </div>
 
                 {/* Physical Address */}
-                <div className="p-5 rounded-xl bg-brand-offWhite border border-gray-200 flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-brand-green/10 text-brand-green shrink-0">
+                <div className="p-4 sm:p-5 rounded-xl bg-brand-offWhite border border-gray-200 flex items-start gap-3.5">
+                  <div className="p-2.5 rounded-lg bg-brand-green/10 text-brand-green shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -238,7 +238,7 @@ export const ProjectsAndContactSection: React.FC = () => {
               </div>
 
               {/* Google Maps CTA Placeholder */}
-              <div className="pt-2">
+              <div className="pt-1">
                 <a
                   href={`https://maps.google.com/?q=${encodeURIComponent(COMPANY_INFO.address)}`}
                   target="_blank"
@@ -252,11 +252,11 @@ export const ProjectsAndContactSection: React.FC = () => {
             </div>
 
             {/* Right Column: Contact Inquiry Form */}
-            <div className="lg:col-span-7 bg-brand-charcoal text-white rounded-2xl p-8 sm:p-10 shadow-2xl border border-white/10 architectural-grid-dark">
+            <div className="lg:col-span-7 bg-brand-charcoal text-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-white/10 architectural-grid-dark">
               <h3 className="text-2xl font-bold font-display text-white mb-2">
                 Send a Direct Project Inquiry
               </h3>
-              <p className="text-xs text-gray-300 mb-8">
+              <p className="text-xs text-gray-300 mb-6 sm:mb-8">
                 Fill out the details below to connect directly with Mr. Mohan Ram and our engineering leadership.
               </p>
 

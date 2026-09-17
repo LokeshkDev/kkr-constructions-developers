@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
             <span className="truncate">{COMPANY_INFO.address}</span>
           </div>
 
-          {/* Right: Phone & Email */}
+          {/* Right: Email Inbox only */}
           <div className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center sm:justify-end">
             <a 
               href={`mailto:${COMPANY_INFO.email}`}
@@ -52,10 +52,6 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
               <Mail className="w-3.5 h-3.5 text-brand-green" />
               <span>{COMPANY_INFO.email}</span>
             </a>
-            <div className="flex items-center gap-1.5 text-white font-medium">
-              <Phone className="w-3.5 h-3.5 text-brand-gold" />
-              <span>{COMPANY_INFO.phones[0]}</span>
-            </div>
           </div>
         </div>
       </div>
@@ -129,22 +125,24 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
                 {item.label}
               </a>
             ))}
-            <div className="pt-4 border-t border-gray-100 space-y-3">
-              <div className="text-xs text-gray-500 px-3 font-bold uppercase tracking-wider">Direct Contacts</div>
-              {COMPANY_INFO.phones.slice(0, 2).map((phone, idx) => (
-                <a 
-                  key={idx} 
-                  href={`tel:${phone.replace(/\s+/g, '')}`}
-                  className="flex items-center gap-2 text-sm text-brand-charcoal px-3 hover:text-brand-green font-semibold"
-                >
-                  <Phone className="w-4 h-4 text-brand-green" />
-                  <span>{phone}</span>
-                </a>
-              ))}
+            <div className="pt-4 border-t border-gray-100 space-y-2.5">
+              <div className="text-xs text-gray-500 px-3 font-bold uppercase tracking-wider">Direct Phone Contacts</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                {COMPANY_INFO.phones.map((phone, idx) => (
+                  <a 
+                    key={idx} 
+                    href={`tel:${phone.replace(/\s+/g, '')}`}
+                    className="flex items-center gap-2 text-sm text-brand-charcoal px-3 py-1 rounded hover:bg-brand-lightGreen hover:text-brand-green font-semibold transition-colors"
+                  >
+                    <Phone className="w-4 h-4 text-brand-green shrink-0" />
+                    <span>{phone}</span>
+                  </a>
+                ))}
+              </div>
               <a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-                className="block text-center w-full py-2.5 rounded bg-brand-green text-white font-bold text-sm mt-2 shadow"
+                className="block text-center w-full py-2.5 rounded bg-brand-green text-white font-bold text-sm mt-3 shadow"
               >
                 Contact Us
               </a>
