@@ -63,11 +63,11 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
       {/* Main Sticky Navbar */}
       <nav className={`transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md py-2 shadow-xl border-b border-brand-green/20' 
-          : 'bg-white/90 backdrop-blur-sm py-2.5 border-b border-gray-200'
+          ? 'bg-white/95 backdrop-blur-md py-1.5 shadow-xl border-b border-brand-green/20' 
+          : 'bg-white/90 backdrop-blur-sm py-2 border-b border-gray-200'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          {/* Bigger Compact Logo */}
+          {/* Prominent Mobile & Desktop Logo */}
           <a 
             href="#hero"
             onClick={(e) => { e.preventDefault(); handleNavClick('#hero'); }} 
@@ -76,7 +76,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
             <img 
               src="/logo.png" 
               alt="KKR Construction & Developers Logo" 
-              className="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-transform group-hover:scale-105 filter drop-shadow-sm"
+              className="h-14 sm:h-16 lg:h-18 w-auto max-w-[210px] sm:max-w-none object-contain transition-transform group-hover:scale-105 filter drop-shadow-sm"
             />
           </a>
 

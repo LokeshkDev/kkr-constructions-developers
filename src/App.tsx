@@ -1,3 +1,4 @@
+import { PageLoader } from './components/PageLoader';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
@@ -16,6 +17,9 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-brand-offWhite font-sans text-brand-charcoal selection:bg-brand-green selection:text-white flex flex-col">
+      {/* Light Construction Page Loader Overlay */}
+      <PageLoader />
+
       {/* Header with utility bar and responsive navigation */}
       <Header onNavigate={handleNavigate} />
 
@@ -24,7 +28,7 @@ export function App() {
         {/* Section 1: Architectural Hero */}
         <HeroSection />
 
-        {/* Section 2: Story, Vision, Mission & Leadership */}
+        {/* Section 2: Story & Leadership */}
         <AboutSection />
 
         {/* Section 3: Engineering Services & Why KKR */}

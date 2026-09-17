@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, HardHat, ShieldCheck, ChevronUp } from 'lucide-react';
+import { Phone, Mail, MapPin, ShieldCheck, ChevronUp } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 
 export const Footer: React.FC = () => {
@@ -13,23 +13,21 @@ export const Footer: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           
-          {/* Brand Info */}
+          {/* Brand Info with Official Logo */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded bg-brand-green flex items-center justify-center text-white font-bold text-xl border border-white/10">
-                <HardHat className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="font-display font-bold text-lg text-white tracking-tight">
-                  KKR <span className="text-brand-green">CONSTRUCTION</span>
-                </div>
-                <div className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">
-                  &amp; Developers
-                </div>
-              </div>
-            </div>
+            <a 
+              href="#hero"
+              onClick={(e) => { e.preventDefault(); scrollToTop(); }}
+              className="inline-block group"
+            >
+              <img 
+                src="/logo.png" 
+                alt="KKR Construction & Developers Logo" 
+                className="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105 filter drop-shadow-md bg-white/95 p-2 rounded-lg border border-white/20"
+              />
+            </a>
 
-            <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
+            <p className="text-xs text-gray-400 leading-relaxed max-w-sm pt-1">
               {COMPANY_INFO.subheading} Roots tracing back to around 2024, delivering residential, commercial, and Mivan formwork concrete solutions.
             </p>
 
@@ -111,4 +109,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-
