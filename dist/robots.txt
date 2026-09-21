@@ -1,5 +1,16 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
-Sitemap: https://kkrconstruction.com/sitemap.xml
+# Directives for major search engine crawlers
+User-agent: Googlebot
+Allow: /
 
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Sitemap index
+Sitemap: https://kkrconstruction.com/sitemap.xml

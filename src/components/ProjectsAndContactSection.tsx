@@ -42,7 +42,7 @@ export const ProjectsAndContactSection: React.FC = () => {
         
         {/* Gallery Header */}
         <div className="max-w-3xl space-y-3 mb-8 sm:mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-lightGreen text-brand-green text-xs font-bold uppercase tracking-wider border border-brand-green/20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-brand-lightGreen text-brand-green text-xs font-bold uppercase tracking-wider border border-brand-green/20">
             <span>Portfolio of Work</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-brand-charcoal tracking-tight">
@@ -51,7 +51,7 @@ export const ProjectsAndContactSection: React.FC = () => {
           <p className="text-gray-600 text-base sm:text-lg">
             Authentic field photographs and engineering work labels representing our concrete, structural, and building execution.
           </p>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-brand-green to-brand-gold rounded-full"></div>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-brand-green to-brand-gold rounded-[2px]"></div>
         </div>
 
         {/* Category Filter Tabs */}
@@ -64,7 +64,7 @@ export const ProjectsAndContactSection: React.FC = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all border ${
+              className={`px-4 py-2 rounded-[4px] text-xs font-bold whitespace-nowrap transition-all border ${
                 selectedCategory === cat
                   ? 'bg-brand-green text-white border-brand-green shadow-md'
                   : 'bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200'
@@ -81,7 +81,7 @@ export const ProjectsAndContactSection: React.FC = () => {
             <div 
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="bg-brand-offWhite rounded-xl overflow-hidden border border-gray-200 hover:border-brand-green hover:shadow-xl transition-all group cursor-pointer flex flex-col"
+              className="bg-brand-offWhite rounded-[4px] overflow-hidden border border-gray-200 hover:border-brand-green hover:shadow-xl transition-all group cursor-pointer flex flex-col"
             >
               {/* Image Box */}
               <div className="relative aspect-[4/3] overflow-hidden bg-gray-900">
@@ -94,11 +94,11 @@ export const ProjectsAndContactSection: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
                 
                 {/* Category Pill */}
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-brand-charcoal/80 text-brand-green text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border border-white/10">
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-[4px] bg-brand-charcoal/80 text-brand-green text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border border-white/10">
                   {project.category}
                 </div>
 
-                <div className="absolute bottom-3 right-3 p-2 rounded-full bg-white/20 text-white backdrop-blur-sm group-hover:bg-brand-green transition-colors">
+                <div className="absolute bottom-3 right-3 p-2 rounded-[4px] bg-white/20 text-white backdrop-blur-sm group-hover:bg-brand-green transition-colors">
                   <ExternalLink className="w-4 h-4" />
                 </div>
               </div>
@@ -125,10 +125,10 @@ export const ProjectsAndContactSection: React.FC = () => {
         {/* Modal Preview */}
         {selectedProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
-            <div className="bg-white rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl border border-gray-200 relative animate-in fade-in zoom-in duration-200">
+            <div className="bg-white rounded-[4px] max-w-2xl w-full overflow-hidden shadow-2xl border border-gray-200 relative animate-in fade-in zoom-in duration-200">
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 p-2 rounded-full bg-black/60 text-white hover:bg-black transition-colors z-10"
+                className="absolute top-4 right-4 p-2 rounded-[4px] bg-black/60 text-white hover:bg-black transition-colors z-10"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -142,7 +142,7 @@ export const ProjectsAndContactSection: React.FC = () => {
               </div>
 
               <div className="p-6 space-y-4">
-                <div className="inline-block px-2.5 py-1 rounded bg-brand-lightGreen text-brand-green text-xs font-bold uppercase">
+                <div className="inline-block px-2.5 py-1 rounded-[4px] bg-brand-lightGreen text-brand-green text-xs font-bold uppercase">
                   {selectedProject.category}
                 </div>
                 <h3 className="text-2xl font-bold font-display text-brand-charcoal">
@@ -154,7 +154,7 @@ export const ProjectsAndContactSection: React.FC = () => {
                 <div className="pt-4 border-t border-gray-100 flex justify-end">
                   <button
                     onClick={() => setSelectedProject(null)}
-                    className="px-5 py-2 rounded bg-brand-charcoal text-white text-xs font-bold hover:bg-brand-green transition-colors"
+                    className="px-5 py-2 rounded-[4px] bg-brand-charcoal text-white text-xs font-bold hover:bg-brand-green transition-colors"
                   >
                     Close Preview
                   </button>
@@ -171,7 +171,7 @@ export const ProjectsAndContactSection: React.FC = () => {
             {/* Left Column: Direct Contact Info */}
             <div className="lg:col-span-5 space-y-6">
               <div className="space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-wider border border-brand-gold/20">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-wider border border-brand-gold/20">
                   <span>Get In Touch</span>
                 </div>
                 <h2 className="text-3xl font-extrabold font-display text-brand-charcoal tracking-tight">
@@ -186,8 +186,8 @@ export const ProjectsAndContactSection: React.FC = () => {
               <div className="space-y-3.5">
                 
                 {/* Phone Numbers */}
-                <div className="p-4 sm:p-5 rounded-xl bg-brand-offWhite border border-gray-200 flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-brand-green/10 text-brand-green shrink-0">
+                <div className="p-4 sm:p-5 rounded-[4px] bg-brand-offWhite border border-gray-200 flex items-start gap-3.5">
+                  <div className="p-2.5 rounded-[4px] bg-brand-green/10 text-brand-green shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -207,8 +207,8 @@ export const ProjectsAndContactSection: React.FC = () => {
                 </div>
 
                 {/* Email Address */}
-                <div className="p-4 sm:p-5 rounded-xl bg-brand-offWhite border border-gray-200 flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-brand-green/10 text-brand-green shrink-0">
+                <div className="p-4 sm:p-5 rounded-[4px] bg-brand-offWhite border border-gray-200 flex items-start gap-3.5">
+                  <div className="p-2.5 rounded-[4px] bg-brand-green/10 text-brand-green shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -223,8 +223,8 @@ export const ProjectsAndContactSection: React.FC = () => {
                 </div>
 
                 {/* Physical Address */}
-                <div className="p-4 sm:p-5 rounded-xl bg-brand-offWhite border border-gray-200 flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-brand-green/10 text-brand-green shrink-0">
+                <div className="p-4 sm:p-5 rounded-[4px] bg-brand-offWhite border border-gray-200 flex items-start gap-3.5">
+                  <div className="p-2.5 rounded-[4px] bg-brand-green/10 text-brand-green shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -243,7 +243,7 @@ export const ProjectsAndContactSection: React.FC = () => {
                   href={`https://maps.google.com/?q=${encodeURIComponent(COMPANY_INFO.address)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded bg-brand-charcoal text-white text-xs font-bold hover:bg-brand-green transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-[4px] bg-brand-charcoal text-white text-xs font-bold hover:bg-brand-green transition-colors"
                 >
                   <MapPin className="w-4 h-4 text-brand-gold" />
                   <span>View Location on Google Maps</span>
@@ -252,7 +252,7 @@ export const ProjectsAndContactSection: React.FC = () => {
             </div>
 
             {/* Right Column: Contact Inquiry Form */}
-            <div className="lg:col-span-7 bg-brand-charcoal text-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-white/10 architectural-grid-dark">
+            <div className="lg:col-span-7 bg-brand-charcoal text-white rounded-[4px] p-6 sm:p-8 lg:p-10 shadow-2xl border border-white/10 architectural-grid-dark">
               <h3 className="text-2xl font-bold font-display text-white mb-2">
                 Send a Direct Project Inquiry
               </h3>
@@ -261,8 +261,8 @@ export const ProjectsAndContactSection: React.FC = () => {
               </p>
 
               {formSubmitted ? (
-                <div className="p-6 rounded-xl bg-brand-green/20 border border-brand-green text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-brand-green text-white flex items-center justify-center mx-auto">
+                <div className="p-6 rounded-[4px] bg-brand-green/20 border border-brand-green text-center space-y-3">
+                  <div className="w-12 h-12 rounded-[4px] bg-brand-green text-white flex items-center justify-center mx-auto">
                     <Check className="w-6 h-6" />
                   </div>
                   <h4 className="text-lg font-bold text-white">Inquiry Received Successfully</h4>
@@ -281,7 +281,7 @@ export const ProjectsAndContactSection: React.FC = () => {
                         value={formData.name}
                         onChange={e => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Anand Kumar"
-                        className="w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white placeholder-gray-400 text-xs focus:outline-none focus:border-brand-green"
+                        className="w-full px-4 py-3 rounded-[4px] bg-white/10 border border-white/20 text-white placeholder-gray-400 text-xs focus:outline-none focus:border-brand-green"
                       />
                     </div>
                     <div>
@@ -292,7 +292,7 @@ export const ProjectsAndContactSection: React.FC = () => {
                         value={formData.phone}
                         onChange={e => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+91 98765 43210"
-                        className="w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white placeholder-gray-400 text-xs focus:outline-none focus:border-brand-green"
+                        className="w-full px-4 py-3 rounded-[4px] bg-white/10 border border-white/20 text-white placeholder-gray-400 text-xs focus:outline-none focus:border-brand-green"
                       />
                     </div>
                   </div>
@@ -305,7 +305,7 @@ export const ProjectsAndContactSection: React.FC = () => {
                         value={formData.email}
                         onChange={e => setFormData({ ...formData, email: e.target.value })}
                         placeholder="name@domain.com"
-                        className="w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white placeholder-gray-400 text-xs focus:outline-none focus:border-brand-green"
+                        className="w-full px-4 py-3 rounded-[4px] bg-white/10 border border-white/20 text-white placeholder-gray-400 text-xs focus:outline-none focus:border-brand-green"
                       />
                     </div>
                     <div>
@@ -313,7 +313,7 @@ export const ProjectsAndContactSection: React.FC = () => {
                       <select
                         value={formData.projectType}
                         onChange={e => setFormData({ ...formData, projectType: e.target.value })}
-                        className="w-full px-4 py-3 rounded bg-brand-darkSlate border border-white/20 text-white text-xs focus:outline-none focus:border-brand-green"
+                        className="w-full px-4 py-3 rounded-[4px] bg-brand-darkSlate border border-white/20 text-white text-xs focus:outline-none focus:border-brand-green"
                       >
                         <option value="Residential Construction">Residential Construction</option>
                         <option value="Commercial Construction">Commercial Construction</option>
@@ -331,13 +331,13 @@ export const ProjectsAndContactSection: React.FC = () => {
                       value={formData.message}
                       onChange={e => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Describe plot location, required floor area, or structural details..."
-                      className="w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white placeholder-gray-400 text-xs focus:outline-none focus:border-brand-green resize-none"
+                      className="w-full px-4 py-3 rounded-[4px] bg-white/10 border border-white/20 text-white placeholder-gray-400 text-xs focus:outline-none focus:border-brand-green resize-none"
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded bg-brand-green text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-emerald transition-colors flex items-center justify-center gap-2 shadow-lg"
+                    className="w-full py-4 rounded-[4px] bg-brand-green text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-darkGreen transition-colors flex items-center justify-center gap-2 shadow-lg border border-emerald-400/30"
                   >
                     <Send className="w-4 h-4" />
                     <span>Submit Project Inquiry</span>

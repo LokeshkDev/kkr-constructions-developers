@@ -36,7 +36,8 @@ export const COMPANY_INFO = {
   subheading: "Delivering quality residential and commercial development with professional engineering, structural strength, and client-focused execution.",
   roots: "Founded around 2024 by Mr. Mohan Ram alongside civil engineering professionals Mr. Thangavel and Mr. Pradeep.",
   email: "kkrconstructiondevelopers@gmail.com",
-  address: "PLOT NO - 73, SAI GARDEN, THIRUVALLUR - 631 203.",
+  address: "Plot No:37, Sai Garden, Thiruvallur, Tamil Nadu 631203",
+  officeLocation: "Plot No:37, Sai Garden, Thiruvallur, Tamil Nadu 631203",
   phones: [
     "+91 80721 83386",
     "+91 75503 31045",
@@ -225,150 +226,129 @@ export const MIVAN_HIGHLIGHTS = {
 export const PROJECTS_DATA: ProjectItem[] = [
   {
     id: "p1",
-    title: "RCC Compound Wall",
-    category: "Structural Works",
-    imageUrl: "https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=800&q=80",
-    description: "Reinforced cement concrete boundary perimeter wall engineered for structural longevity and security."
+    title: "Mivan Aluminum Formwork Modular Staging",
+    category: "Mivan Construction",
+    imageUrl: "/images/mivan/mivan-technology-beam-build-kkr-constructions-and-developers.png",
+    description: "Laser-aligned 6061-T6 aluminum modular panels erected for rapid monolithic wall and deck casting."
   },
   {
     id: "p2",
-    title: "PCC Work",
+    title: "High-Density Monolithic Concrete Pour",
+    category: "Mivan Construction",
+    imageUrl: "/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.png",
+    description: "Continuous pour of M25/M30 grade concrete with mechanical needle compaction eliminating voids and honeycombs."
+  },
+  {
+    id: "p3",
+    title: "Heavy Rebar Grilling & Steel Binding",
+    category: "Structural Works",
+    imageUrl: "/images/mivan/mivan-technology-grilling-beam-construction-kkr-constructions-and-developers.png",
+    description: "Certified Fe550 TMT rebar binding with precise cover blocks and integrated conduit piping."
+  },
+  {
+    id: "p4",
+    title: "Monolithic Deck & Floor Slab Staging",
+    category: "Mivan Construction",
+    imageUrl: "/images/mivan/mivan-technology-slab-construction-kkr-constructions-and-developers.png",
+    description: "Aluminum deck panels laid with prop-head support systems for single-pour floor slabs."
+  },
+  {
+    id: "p5",
+    title: "Integrated Column & Pillar Vertical Alignment",
+    category: "Structural Works",
+    imageUrl: "/images/mivan/mivan-technology-beam-pillar-kkr-constructions-and-developers.png",
+    description: "Laser-aligned vertical column shuttering reinforced with heavy-duty tie rods and wallers."
+  },
+  {
+    id: "p6",
+    title: "Joint Sealing & Damp-Proof Barrier",
+    category: "Finishing Works",
+    imageUrl: "/images/mivan/mivan-technology-sealing-construction-kkr-constructions-and-developers.png",
+    description: "De-shuttered concrete revealing ultra-smooth, moisture-impermeable monolithic shell with zero joints."
+  },
+  {
+    id: "p7",
+    title: "Before & After Structural Monolith Finish",
+    category: "Mivan Construction",
+    imageUrl: "/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.png",
+    description: "Mirror-smooth monolithic concrete walls compared against conventional brickwork, requiring zero plastering."
+  },
+  {
+    id: "p8",
+    title: "Residential G+3 Building Turnkey Execution",
+    category: "Residential",
+    imageUrl: "/images/services/residential-construction-service-detail-kkr-constrcutions-developer.png",
+    description: "Full turnkey residential construction with structural RCC framework and custom architectural finishes."
+  },
+  {
+    id: "p9",
+    title: "Duplex Villa Architectural Concrete Frame",
+    category: "Residential",
+    imageUrl: "/images/services/residential-construction-service1-detail-kkr-constrcutions-developer.png",
+    description: "High-spec residential villa construction with engineered spans and cantilevered balcony slabs."
+  },
+  {
+    id: "p10",
+    title: "Modern Multi-Story Residential Elevation",
+    category: "Residential",
+    imageUrl: "/images/services/residential-construction-service2-detail-kkr-constrcutions-developer.png",
+    description: "Contemporary residential facade execution with durable weather-proof finishes and balcony glass railings."
+  },
+  {
+    id: "p11",
+    title: "Commercial Multi-Story Complex",
+    category: "Commercial Projects",
+    imageUrl: "/images/services/commercial-construction1-kkr-constrcutions-developer.png",
+    description: "Multi-floor commercial infrastructure engineered for high footfall, retail spaces, and heavy floor loading."
+  },
+  {
+    id: "p12",
+    title: "Commercial Plaza Structural Framework",
+    category: "Commercial Projects",
+    imageUrl: "/images/services/commercial-construction2-kkr-constrcutions-developer.png",
+    description: "Heavy structural column grids and clear-span floor plates for flexible commercial leasing."
+  },
+  {
+    id: "p13",
+    title: "Commercial Office & Institutional Fit-Out",
+    category: "Commercial Projects",
+    imageUrl: "/images/services/commercial-construction3-kkr-constrcutions-developer.png",
+    description: "High-utility commercial space execution with complete electrical, fire safety, and plumbing shafts."
+  },
+  {
+    id: "p14",
+    title: "PCC Work & Sub-Base Preparation",
     category: "Concrete Works",
     imageUrl: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80",
     description: "Plain Cement Concrete sub-base preparation for uniform foundation load distribution."
   },
   {
-    id: "p3",
+    id: "p15",
     title: "Raft Bottom Mat Work",
     category: "Concrete Works",
     imageUrl: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
     description: "Heavy rebar mesh layout for raft foundation base reinforcement."
   },
   {
-    id: "p4",
-    title: "FF Slab Reinforcement Work",
-    category: "Structural Works",
-    imageUrl: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
-    description: "First floor slab steel bar binding and structural reinforcement prior to concrete pour."
-  },
-  {
-    id: "p5",
-    title: "Raft Bottom Mat and Wall Reinforcement",
-    category: "Structural Works",
-    imageUrl: "https://images.unsplash.com/photo-1590496793907-498c60010901?auto=format&fit=crop&w=800&q=80",
-    description: "Integrated foundation mat and retaining wall steel cage binding."
-  },
-  {
-    id: "p6",
-    title: "Beam Bottom Shuttering",
-    category: "Structural Works",
-    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
-    description: "Precision shuttering support for structural beam bottoms."
-  },
-  {
-    id: "p7",
-    title: "Plastering Work",
-    category: "Finishing Works",
-    imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
-    description: "Internal and external high-finish masonry cement plastering application."
-  },
-  {
-    id: "p8",
-    title: "External Scaffolding Work",
-    category: "Structural Works",
-    imageUrl: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
-    description: "Heavy-duty steel pipe scaffolding for exterior wall work and elevation plastering."
-  },
-  {
-    id: "p9",
-    title: "Terrace Water Bund Work",
-    category: "Finishing Works",
-    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    description: "Parapet wall bunding and waterproofing treatment on terrace slab."
-  },
-  {
-    id: "p10",
-    title: "Canara Bank Premises",
-    category: "Commercial Projects",
-    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-    description: "Commercial branch fit-out and structural wall work for banking infrastructure."
-  },
-  {
-    id: "p11",
-    title: "Canara Bank (Locker Room)",
-    category: "Commercial Projects",
-    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80",
-    description: "High-security reinforced RCC strongroom and vault concrete structure."
-  },
-  {
-    id: "p12",
-    title: "Mivan Formwork Execution",
-    category: "Mivan Construction",
-    imageUrl: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80",
-    description: "Lightweight aluminum formwork assembly for monolithic floor concrete casting."
-  },
-  {
-    id: "p13",
-    title: "Site Transformation (Before / After)",
-    category: "Finishing Works",
-    imageUrl: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
-    description: "Complete visual progression from raw excavation to completed structural finishing."
-  },
-  {
-    id: "p14",
-    title: "Culvert Bridge Construction",
-    category: "Commercial Projects",
-    imageUrl: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
-    description: "Civil infrastructure box culvert bridge for drainage and access road flow."
-  },
-  {
-    id: "p15",
-    title: "Drainage Infrastructure Work",
-    category: "Structural Works",
-    imageUrl: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
-    description: "Pre-cast and cast-in-situ concrete storm drainage channels."
-  },
-  {
     id: "p16",
-    title: "Water Weather Course Work",
-    category: "Finishing Works",
-    imageUrl: "https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=800&q=80",
-    description: "Terrace weatherproofing and thermal slope insulation layer application."
+    title: "External Scaffolding & Safety Staging",
+    category: "Structural Works",
+    imageUrl: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+    description: "Heavy-duty steel pipe scaffolding for exterior wall work, plastering, and elevation treatments."
   },
   {
     id: "p17",
-    title: "Interlocking Staircase",
-    category: "Residential",
-    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
-    description: "Architectural RCC interlocking flight staircase structural casting."
+    title: "Canara Bank Branch (Strongroom & Vault)",
+    category: "Commercial Projects",
+    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80",
+    description: "High-security reinforced RCC strongroom and vault concrete structure for banking operations."
   },
   {
     id: "p18",
-    title: "Windows with Seating",
-    category: "Residential",
-    imageUrl: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
-    description: "Custom cantilever window bay alcove with built-in seating frame."
-  },
-  {
-    id: "p19",
-    title: "First Floor Beam & Slab Shuttering",
+    title: "RCC Compound Wall & Perimeter Security",
     category: "Structural Works",
-    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
-    description: "Systematic props and plywood shuttering staging for overhead slab casting."
-  },
-  {
-    id: "p20",
-    title: "Modern Site Elevation - Residential",
-    category: "Residential",
-    imageUrl: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
-    description: "Contemporary multi-story residential building facade execution."
-  },
-  {
-    id: "p21",
-    title: "Commercial Site Elevation",
-    category: "Commercial Projects",
-    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-    description: "Architectural exterior elevation finish for commercial building complex."
+    imageUrl: "https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=800&q=80",
+    description: "Reinforced cement concrete boundary perimeter wall engineered for structural longevity and security."
   }
 ];
 

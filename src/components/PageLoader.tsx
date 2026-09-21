@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HardHat, Hammer } from 'lucide-react';
 
 interface PageLoaderProps {
   onComplete?: () => void;
@@ -40,7 +39,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({ onComplete }) => {
           {/* Ambient Blueprint Scanning Motion Background */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,138,60,0.06)_0,transparent_70%)]"></div>
 
-          <div className="relative max-w-md w-full bg-white/90 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-gray-200 text-center space-y-6">
+          <div className="relative max-w-md w-full bg-white/90 backdrop-blur-md rounded-[4px] p-8 shadow-2xl border border-gray-200 text-center space-y-6">
             
             {/* Logo Container with Construction Scanning Beam */}
             <div className="relative inline-block py-2">
@@ -67,18 +66,15 @@ export const PageLoader: React.FC<PageLoaderProps> = ({ onComplete }) => {
             {/* Construction Motion Indicator */}
             <div className="space-y-2">
               <div className="flex items-center justify-center gap-2 text-brand-green font-bold text-xs uppercase tracking-widest">
-                <span>Initializing Project Blueprint</span>
+                <span>KKR Construction & Developers</span>
               </div>
-              <p className="text-xs text-gray-500 font-medium">
-                Engineering Excellence &amp; Concrete Solutions
-              </p>
             </div>
 
             {/* Construction Progress Bar */}
             <div className="space-y-1.5 pt-2">
-              <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden p-0.5 border border-gray-200 relative">
+              <div className="w-full h-2.5 bg-gray-100 rounded-[2px] overflow-hidden p-0.5 border border-gray-200 relative">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-brand-green via-brand-emerald to-brand-gold rounded-full relative"
+                  className="h-full bg-gradient-to-r from-brand-green via-brand-emerald to-brand-gold rounded-[2px] relative"
                   style={{ width: `${Math.min(progress, 100)}%` }}
                   transition={{ duration: 0.2 }}
                 >

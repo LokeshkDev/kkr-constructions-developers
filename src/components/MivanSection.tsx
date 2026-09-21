@@ -27,7 +27,7 @@ export const MivanSection: React.FC = () => {
           {MIVAN_HIGHLIGHTS.stats.map((stat, idx) => (
             <div 
               key={idx}
-              className="p-6 sm:p-8 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/15 hover:border-brand-green/60 transition-all group"
+              className="p-6 sm:p-8 rounded-[4px] bg-gradient-to-br from-white/10 to-white/5 border border-white/15 hover:border-brand-green/60 transition-all group"
             >
               <div className="text-4xl sm:text-5xl font-extrabold font-display text-brand-green group-hover:scale-105 transition-transform">
                 {stat.value}
@@ -52,7 +52,7 @@ export const MivanSection: React.FC = () => {
             {MIVAN_HIGHLIGHTS.benefits.map((benefit, idx) => (
               <div 
                 key={idx}
-                className="p-5 sm:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                className="p-5 sm:p-6 rounded-[4px] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
               >
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-brand-green shrink-0 mt-1" />
@@ -71,7 +71,7 @@ export const MivanSection: React.FC = () => {
         </div>
 
         {/* Interactive Comparison Feature */}
-        <div className="bg-brand-darkSlate rounded-2xl p-6 sm:p-8 border border-white/10 shadow-2xl">
+        <div className="bg-brand-darkSlate rounded-[4px] p-6 sm:p-8 border border-white/10 shadow-2xl">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 sm:mb-8">
             <div>
               <h4 className="text-xl font-bold font-display text-white">System Comparison</h4>
@@ -79,10 +79,10 @@ export const MivanSection: React.FC = () => {
             </div>
 
             {/* Toggle Tabs */}
-            <div className="inline-flex rounded-lg bg-white/10 p-1 border border-white/10">
+            <div className="inline-flex rounded-[4px] bg-white/10 p-1 border border-white/10">
               <button
                 onClick={() => setActiveTab('mivan')}
-                className={`px-4 py-2 rounded-md text-xs font-bold transition-all ${
+                className={`px-4 py-2 rounded-[2px] text-xs font-bold transition-all ${
                   activeTab === 'mivan' 
                     ? 'bg-brand-green text-white shadow' 
                     : 'text-gray-400 hover:text-white'
@@ -92,7 +92,7 @@ export const MivanSection: React.FC = () => {
               </button>
               <button
                 onClick={() => setActiveTab('traditional')}
-                className={`px-4 py-2 rounded-md text-xs font-bold transition-all ${
+                className={`px-4 py-2 rounded-[2px] text-xs font-bold transition-all ${
                   activeTab === 'traditional' 
                     ? 'bg-amber-600 text-white shadow' 
                     : 'text-gray-400 hover:text-white'
@@ -104,7 +104,7 @@ export const MivanSection: React.FC = () => {
           </div>
 
           {activeTab === 'mivan' ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-5 sm:p-6 rounded-xl bg-brand-green/10 border border-brand-green/30">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-5 sm:p-6 rounded-[4px] bg-brand-green/10 border border-brand-green/30">
               <div className="space-y-1.5">
                 <div className="text-xs font-bold text-brand-green uppercase tracking-wider">Speed &amp; Cycle</div>
                 <div className="text-base sm:text-lg font-bold text-white">7–10 Days / Floor</div>
@@ -122,7 +122,7 @@ export const MivanSection: React.FC = () => {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-5 sm:p-6 rounded-xl bg-amber-950/30 border border-amber-500/20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-5 sm:p-6 rounded-[4px] bg-amber-950/30 border border-amber-500/20">
               <div className="space-y-1.5">
                 <div className="text-xs font-bold text-amber-400 uppercase tracking-wider">Speed &amp; Cycle</div>
                 <div className="text-base sm:text-lg font-bold text-white">20–25 Days / Floor</div>

@@ -1,10 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
   <url>
     <loc>https://kkrconstruction.com/</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kkrconstruction.com/homepage-banner-kkr-construction-developers.png</image:loc>
+      <image:title>KKR Construction and Developers Thiruvallur Chennai</image:title>
+    </image:image>
   </url>
-</urlset>
 
+  <!-- About Us -->
+  <url>
+    <loc>https://kkrconstruction.com/about</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kkrconstruction.com/about-kkr-construction-developers.png</image:loc>
+      <image:title>KKR Construction Headquarters and Leadership</image:title>
+    </image:image>
+  </url>
+
+  <!-- Services Index -->
+  <url>
+    <loc>https://kkrconstruction.com/services</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service Detail: Residential Construction -->
+  <url>
+    <loc>https://kkrconstruction.com/services/residential-construction</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kkrconstruction.com/images/services/residential-construction-service-detail-kkr-constrcutions-developer.png</image:loc>
+      <image:title>Turnkey Residential Villa and Apartment Construction</image:title>
+    </image:image>
+  </url>
+
+  <!-- Service Detail: Commercial Construction -->
+  <url>
+    <loc>https://kkrconstruction.com/services/commercial-construction</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kkrconstruction.com/images/services/commercial-construction1-kkr-constrcutions-developer.png</image:loc>
+      <image:title>Commercial Complexes and Banking Strongroom Construction</image:title>
+    </image:image>
+  </url>
+
+  <!-- Service Detail: Interior Design & Engineering -->
+  <url>
+    <loc>https://kkrconstruction.com/services/interior-design-engineering</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Service Detail: Concrete & Structural Works -->
+  <url>
+    <loc>https://kkrconstruction.com/services/concrete-structural-works</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Mivan Aluminum Formwork Technology -->
+  <url>
+    <loc>https://kkrconstruction.com/mivan-technology</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kkrconstruction.com/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.png</image:loc>
+      <image:title>Mivan Aluminum Formwork Monolithic Concrete Pouring</image:title>
+    </image:image>
+  </url>
+
+  <!-- Project Gallery -->
+  <url>
+    <loc>https://kkrconstruction.com/project-gallery</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://kkrconstruction.com/contact</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
