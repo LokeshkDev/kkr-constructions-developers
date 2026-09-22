@@ -61,9 +61,6 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, onOpenQu
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display text-brand-charcoal tracking-tight">
             Project Gallery
           </h1>
-          <p className="text-xs sm:text-sm text-gray-600 max-w-xl mx-auto">
-            High-resolution site execution photographs covering Mivan aluminum formwork, raft foundations, RCC shear walls, and commercial developments.
-          </p>
         </div>
 
         {/* 2. Category Filter Tabs */}
@@ -136,16 +133,15 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, onOpenQu
                   </div>
                 </div>
 
-                {/* Project Details */}
-                <div className="p-3 sm:p-5 space-y-2 flex-1 flex flex-col justify-between">
-                  <p className="text-[11px] sm:text-xs text-gray-600 line-clamp-2 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="pt-2 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs font-bold text-brand-green">
-                    <span>View Photo</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                {/* Project Details - Title and Action Only (No description) */}
+                <div className="p-3 sm:p-4 bg-white border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs font-bold text-brand-green">
+                  <span className="text-brand-charcoal font-display truncate pr-2 text-xs sm:text-sm font-bold group-hover:text-brand-green transition-colors">
+                    {project.title}
+                  </span>
+                  <span className="shrink-0 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    <span>View</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
                 </div>
               </motion.div>
             ))}

@@ -253,22 +253,22 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
                   </div>
                 </div>
 
-                {/* Interactive CTA Buttons */}
-                <div className="pt-3 border-t border-gray-100 flex flex-col sm:flex-row gap-2">
+                {/* Interactive CTA Buttons - Single row on mobile & tablet */}
+                <div className="pt-3 border-t border-gray-100 flex flex-row gap-2 w-full">
                   <button
                     onClick={() => onNavigate(`service-${service.id}`)}
-                    className="flex-1 py-2.5 px-3.5 rounded-[4px] bg-brand-lightGreen hover:bg-brand-green text-brand-green hover:text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-xs border border-brand-green/20 active:scale-95"
+                    className="flex-1 py-2 sm:py-2.5 px-2.5 sm:px-3.5 rounded-[4px] bg-brand-lightGreen hover:bg-brand-green text-brand-green hover:text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1 shadow-xs border border-brand-green/20 active:scale-95 truncate text-center"
                   >
-                    <Eye className="w-3.5 h-3.5" />
-                    <span>View Full Service Details</span>
+                    <Eye className="w-3.5 h-3.5 shrink-0" />
+                    <span className="truncate">View Details</span>
                   </button>
 
                   <button
                     onClick={() => onOpenQuoteModal ? onOpenQuoteModal(service.title, 'quote') : onNavigate('contact')}
-                    className="py-2.5 px-4 rounded-[4px] bg-brand-green text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-darkGreen transition-all flex items-center justify-center gap-1.5 shadow-sm active:scale-95 shrink-0 border border-emerald-400/30"
+                    className="py-2 sm:py-2.5 px-3 sm:px-4 rounded-[4px] bg-brand-green text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider hover:bg-brand-darkGreen transition-all flex items-center justify-center gap-1 shadow-sm active:scale-95 shrink-0 border border-emerald-400/30 text-center"
                   >
                     <span>Get Quote</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                   </button>
                 </div>
               </div>

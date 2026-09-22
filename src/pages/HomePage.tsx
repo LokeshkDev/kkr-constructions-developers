@@ -140,20 +140,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuoteModal
               {COMPANY_INFO.story}
             </p>
 
-            <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="pt-2 flex flex-row gap-2 sm:gap-4 w-full">
               <button
                 onClick={() => onNavigate('about')}
-                className="px-6 py-3 rounded-[4px] bg-brand-green text-white font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-brand-darkGreen transition-all shadow-md hover:shadow-brand-green/30 flex items-center justify-center gap-2 active:scale-95 border border-emerald-400/30"
+                className="flex-1 px-2.5 sm:px-6 py-2.5 sm:py-3 rounded-[4px] bg-brand-green text-white font-bold text-[11px] sm:text-sm uppercase tracking-wider hover:bg-brand-darkGreen transition-all shadow-md hover:shadow-brand-green/30 flex items-center justify-center gap-1.5 sm:gap-2 active:scale-95 border border-emerald-400/30 text-center"
               >
-                <span>Learn More About Us</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>About Us</span>
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
               </button>
 
               <button
                 onClick={() => onNavigate('projects')}
-                className="px-6 py-3 rounded-[4px] bg-white border border-gray-300 text-brand-charcoal hover:text-brand-green hover:border-brand-green font-bold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 active:scale-95"
+                className="flex-1 px-2.5 sm:px-6 py-2.5 sm:py-3 rounded-[4px] bg-white border border-gray-300 text-brand-charcoal hover:text-brand-green hover:border-brand-green font-bold text-[11px] sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 sm:gap-2 active:scale-95 text-center"
               >
-                <span>Explore Project Gallery</span>
+                <span>Project Gallery</span>
               </button>
             </div>
           </motion.div>
@@ -471,9 +471,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuoteModal
               <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-brand-charcoal">
                 Project Gallery
               </h2>
-              <p className="text-xs sm:text-sm text-gray-600 max-w-xl">
-                Click any site photograph to view full-resolution structural execution, Mivan formwork staging, and civil engineering milestones.
-              </p>
             </div>
 
             <button
@@ -507,7 +504,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuoteModal
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
                   {/* Category Badge */}
                   <div className="absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-[4px] bg-brand-charcoal/85 backdrop-blur-md border border-white/20 text-brand-gold text-[8px] sm:text-[10px] font-extrabold uppercase tracking-wider">
@@ -521,18 +518,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuoteModal
                       <span>Click to Enlarge</span>
                     </div>
                   </div>
-
-                  {/* Title Bar */}
-                  <div className="absolute bottom-2 left-2.5 right-2.5 sm:bottom-3 sm:left-4 sm:right-4">
-                    <h3 className="text-xs sm:text-base font-bold font-display text-white group-hover:text-amber-300 transition-colors line-clamp-1 sm:line-clamp-none">
-                      {item.title}
-                    </h3>
-                  </div>
                 </div>
 
-                {/* Footer caption */}
-                <div className="p-2.5 sm:p-4 bg-white border-t border-gray-100 flex items-center justify-between text-xs">
-                  <span className="text-gray-600 line-clamp-1 flex-1 pr-1.5 text-[10px] sm:text-xs">{item.description}</span>
+                {/* Footer caption - Title and View only (No description) */}
+                <div className="p-2.5 sm:p-3.5 bg-white border-t border-gray-100 flex items-center justify-between text-xs">
+                  <h3 className="text-brand-charcoal font-bold font-display truncate pr-2 text-xs sm:text-sm group-hover:text-brand-green transition-colors">
+                    {item.title}
+                  </h3>
                   <span className="text-brand-green font-bold shrink-0 flex items-center gap-0.5 sm:gap-1 group-hover:translate-x-0.5 transition-transform text-[10px] sm:text-xs">
                     <span>View</span>
                     <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />

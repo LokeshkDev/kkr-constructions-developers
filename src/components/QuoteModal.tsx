@@ -109,22 +109,22 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                   Thank you, <strong>{formData.name || 'Valued Client'}</strong>. Our civil engineering team has received your request for <strong>{formData.serviceType}</strong> at <strong>{formData.location || 'your site'}</strong>. We will reach out to <strong>{formData.phone}</strong> within 24 hours.
                 </p>
 
-                <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+                <div className="pt-4 flex flex-row gap-2.5 sm:gap-3 justify-center max-w-md mx-auto w-full">
                   <a
                     href={`https://wa.me/919940176461?text=${encodeURIComponent(
                       `Hello KKR Construction, I just submitted a ${isInspection ? 'Site Inspection' : 'Quotation'} request for ${formData.serviceType} in ${formData.location}. My phone is ${formData.phone}.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-3 px-4 rounded-[4px] bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-sm"
+                    className="flex-[2] py-2.5 sm:py-3 px-2 sm:px-4 rounded-[4px] bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] sm:text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 shadow-sm text-center"
                   >
-                    <MessageCircle className="w-4 h-4" />
-                    <span>Quick WhatsApp Follow-up</span>
+                    <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                    <span className="truncate">WhatsApp Follow-up</span>
                   </a>
 
                   <button
                     onClick={onClose}
-                    className="py-3 px-5 rounded-[4px] bg-gray-100 hover:bg-gray-200 text-brand-charcoal font-bold text-xs uppercase tracking-wider transition-colors"
+                    className="flex-1 py-2.5 sm:py-3 px-3 sm:px-5 rounded-[4px] bg-gray-100 hover:bg-gray-200 text-brand-charcoal font-bold text-[11px] sm:text-xs uppercase tracking-wider transition-colors text-center"
                   >
                     Done
                   </button>

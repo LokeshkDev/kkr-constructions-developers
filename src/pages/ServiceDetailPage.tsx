@@ -440,22 +440,22 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ serviceId,
               </p>
             </div>
 
-            {/* Quick Action CTAs */}
-            <div className="flex items-center gap-2 shrink-0">
+            {/* Quick Action CTAs - 1 row on mobile & tablet */}
+            <div className="flex flex-row items-center gap-2 w-full sm:w-auto shrink-0 pt-1 sm:pt-0">
               <button
                 onClick={() => onNavigate('services')}
-                className="px-3.5 py-2 rounded-[4px] bg-gray-100 hover:bg-gray-200 text-brand-charcoal text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 active:scale-95 border border-gray-300"
+                className="flex-1 sm:flex-initial px-3 sm:px-3.5 py-2 rounded-[4px] bg-gray-100 hover:bg-gray-200 text-brand-charcoal text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 active:scale-95 border border-gray-300 text-center"
               >
-                <ArrowLeft className="w-3.5 h-3.5" />
+                <ArrowLeft className="w-3.5 h-3.5 shrink-0" />
                 <span>All Services</span>
               </button>
 
               <button
                 onClick={() => onOpenQuoteModal ? onOpenQuoteModal(service.title, 'quote') : onNavigate('contact')}
-                className="px-4 py-2 rounded-[4px] bg-brand-green text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-brand-darkGreen transition-all shadow-md active:scale-95 flex items-center gap-1.5 border border-emerald-400/30"
+                className="flex-1 sm:flex-initial px-3 sm:px-4 py-2 rounded-[4px] bg-brand-green text-white text-[11px] sm:text-sm font-bold uppercase tracking-wider hover:bg-brand-darkGreen transition-all shadow-md active:scale-95 flex items-center justify-center gap-1.5 border border-emerald-400/30 text-center"
               >
                 <span>Request Estimate</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
               </button>
             </div>
           </div>

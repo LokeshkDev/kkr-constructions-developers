@@ -139,18 +139,18 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate
               alt="KKR Construction & Developers Logo" 
               className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
                 isScrolled 
-                  ? 'h-9 sm:h-10 lg:h-11' 
-                  : 'h-12 sm:h-14 lg:h-16'
+                  ? 'h-11 sm:h-10 lg:h-11' 
+                  : 'h-14 xs:h-[60px] sm:h-14 lg:h-16'
               }`}
             />
             <div className="flex flex-col justify-center">
               <span className={`font-display font-extrabold text-brand-green leading-tight tracking-tight uppercase transition-all duration-300 ${
-                isScrolled ? 'text-xs sm:text-sm lg:text-base' : 'text-sm sm:text-lg lg:text-xl'
+                isScrolled ? 'text-sm sm:text-sm lg:text-base' : 'text-base xs:text-lg sm:text-lg lg:text-xl'
               }`}>
                 KKR Construction
               </span>
               <span className={`font-extrabold text-brand-green tracking-widest uppercase transition-all duration-300 ${
-                isScrolled ? 'text-[9px] sm:text-[10px]' : 'text-[10px] sm:text-xs'
+                isScrolled ? 'text-[10px] sm:text-[10px]' : 'text-[11px] xs:text-xs sm:text-xs'
               }`}>
                 &amp; Developers
               </span>
@@ -172,14 +172,17 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate
                     >
                       <button
                         onClick={() => handleNavClick('services')}
-                        className={`px-3 py-2 text-sm font-bold transition-all rounded-[4px] whitespace-nowrap flex items-center gap-1 ${
+                        className={`relative px-3 py-2 text-sm font-bold transition-colors whitespace-nowrap flex items-center gap-1 group ${
                           isServiceActive
-                            ? 'text-brand-green bg-brand-lightGreen/80 border border-brand-green/20'
-                            : 'text-brand-charcoal hover:text-brand-green hover:bg-brand-lightGreen/40'
+                            ? 'text-brand-green'
+                            : 'text-brand-charcoal hover:text-brand-green'
                         }`}
                       >
                         <span>{item.label}</span>
-                        <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${desktopDropdownOpen ? 'rotate-180 text-brand-green' : 'text-gray-400'}`} />
+                        <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${desktopDropdownOpen ? 'rotate-180 text-brand-green' : isServiceActive ? 'text-brand-green' : 'text-gray-400 group-hover:text-brand-green'}`} />
+                        {isServiceActive && (
+                          <span className="absolute bottom-0 left-2 right-2 h-[2.5px] bg-brand-green rounded-full" />
+                        )}
                       </button>
 
                       {/* Desktop Dropdown Panel */}
@@ -241,13 +244,16 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate
                     key={item.label}
                     href={getPageUrl(item.page)}
                     onClick={(e) => { e.preventDefault(); handleNavClick(item.page); }}
-                    className={`px-3 py-2 text-sm font-bold transition-all rounded-[4px] whitespace-nowrap ${
+                    className={`relative px-3 py-2 text-sm font-bold transition-colors whitespace-nowrap flex items-center ${
                       isActive
-                        ? 'text-brand-green bg-brand-lightGreen/80 border border-brand-green/20'
-                        : 'text-brand-charcoal hover:text-brand-green hover:bg-brand-lightGreen/40'
+                        ? 'text-brand-green'
+                        : 'text-brand-charcoal hover:text-brand-green'
                     }`}
                   >
-                    {item.label}
+                    <span>{item.label}</span>
+                    {isActive && (
+                      <span className="absolute bottom-0 left-2 right-2 h-[2.5px] bg-brand-green rounded-full" />
+                    )}
                   </a>
                 );
               })}
@@ -282,19 +288,19 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate
               if (item.hasDropdown) {
                 return (
                   <div key={item.label} className="space-y-1">
-                    <div className="flex items-center justify-between px-3 py-2 rounded-[4px] hover:bg-brand-lightGreen/40">
+                    <div className="flex items-center justify-between px-3 py-2">
                       <a
                         href={getPageUrl('services')}
                         onClick={(e) => { e.preventDefault(); handleNavClick('services'); }}
-                        className={`text-base font-bold transition-colors ${
-                          isServiceActive ? 'text-brand-green' : 'text-brand-charcoal hover:text-brand-green'
+                        className={`inline-flex items-center text-base font-bold transition-colors ${
+                          isServiceActive ? 'text-brand-green border-b-2 border-brand-green pb-1' : 'text-brand-charcoal hover:text-brand-green'
                         }`}
                       >
-                        {item.label}
+                        <span>{item.label}</span>
                       </a>
                       <button
                         onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                        className="p-1 rounded text-gray-500 hover:text-brand-green"
+                        className="p-1.5 rounded text-gray-500 hover:text-brand-green"
                         aria-label="Toggle services list"
                       >
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180 text-brand-green' : ''}`} />
@@ -337,18 +343,19 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate
 
               const isActive = currentPage === item.page;
               return (
-                <a
-                  key={item.label}
-                  href={getPageUrl(item.page)}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(item.page); }}
-                  className={`block w-full text-left px-3 py-2.5 rounded-[4px] text-base font-semibold transition-colors ${
-                    isActive 
-                      ? 'bg-brand-lightGreen text-brand-green font-bold border-l-4 border-brand-green' 
-                      : 'text-brand-charcoal hover:text-brand-green hover:bg-brand-lightGreen'
-                  }`}
-                >
-                  {item.label}
-                </a>
+                <div key={item.label} className="px-3 py-2">
+                  <a
+                    href={getPageUrl(item.page)}
+                    onClick={(e) => { e.preventDefault(); handleNavClick(item.page); }}
+                    className={`inline-flex items-center text-base font-semibold transition-colors ${
+                      isActive 
+                        ? 'text-brand-green font-bold border-b-2 border-brand-green pb-1' 
+                        : 'text-brand-charcoal hover:text-brand-green'
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                  </a>
+                </div>
               );
             })}
             <div className="pt-4 border-t border-gray-100 space-y-2.5">
