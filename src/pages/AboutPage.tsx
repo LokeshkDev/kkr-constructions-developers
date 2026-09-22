@@ -388,69 +388,149 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuoteMod
           </p>
         </motion.div>
 
-        {/* 2x2 Creative Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
-          {TEAM_MEMBERS.map((member, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              whileHover={{ y: -6 }}
-              className="bg-white rounded-[4px] overflow-hidden border border-gray-200/80 shadow-md hover:shadow-2xl hover:border-brand-green/60 transition-all group flex flex-col sm:flex-row"
-            >
-              {/* Portrait Visual Area */}
-              <div className="sm:w-2/5 relative min-h-[200px] sm:min-h-[240px] bg-gradient-to-br from-brand-charcoal via-[#0E1B26] to-brand-charcoal flex items-center justify-center overflow-hidden shrink-0">
-                <div className="absolute inset-0 architectural-grid-dark opacity-30"></div>
-                
-                <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-[4px] bg-gradient-to-tr from-brand-green/30 via-emerald-500/10 to-brand-gold/30 border-2 border-white/20 p-2 shadow-2xl flex items-center justify-center group-hover:scale-105 group-hover:border-brand-green transition-all duration-500">
-                  <div className="w-full h-full rounded-[2px] bg-brand-charcoal/90 flex items-center justify-center text-brand-green shadow-inner">
-                    <User className="w-14 h-14 sm:w-16 sm:h-16 text-brand-green/90 group-hover:text-amber-300 transition-colors" />
+        {/* Highlighted Top Center Card: Founder Mr. Mohan Ram */}
+        {(() => {
+          const founder = TEAM_MEMBERS.find(m => m.isFounder) || TEAM_MEMBERS[0];
+          const otherMembers = TEAM_MEMBERS.filter(m => !m.isFounder);
+          return (
+            <>
+              {founder && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="max-w-3xl mx-auto mb-8 sm:mb-10 bg-white rounded-[4px] overflow-hidden border-2 border-brand-green/40 shadow-xl hover:shadow-2xl hover:border-brand-green transition-all group flex flex-col sm:flex-row relative"
+                >
+                  {/* Portrait Visual Area */}
+                  <div className="sm:w-2/5 relative min-h-[220px] sm:min-h-[260px] bg-gradient-to-br from-[#0B1510] via-brand-charcoal to-[#0A1A12] flex items-center justify-center overflow-hidden shrink-0">
+                    <div className="absolute inset-0 architectural-grid-dark opacity-30"></div>
+                    
+                    <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-[4px] bg-gradient-to-tr from-brand-gold/40 via-emerald-500/20 to-brand-green/40 border-2 border-amber-300/40 p-2 shadow-2xl flex items-center justify-center group-hover:scale-105 group-hover:border-amber-400 transition-all duration-500">
+                      <div className="w-full h-full rounded-[2px] bg-brand-charcoal/95 flex flex-col items-center justify-center text-amber-300 shadow-inner">
+                        <User className="w-14 h-14 sm:w-16 sm:h-16 text-amber-300 drop-shadow-sm group-hover:scale-110 transition-transform" />
+                        <span className="text-[10px] font-extrabold tracking-widest uppercase text-amber-300 mt-1">Founder</span>
+                      </div>
+                    </div>
+
+                    {/* Founder Badge */}
+                    <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-[4px] bg-gradient-to-r from-amber-500 to-amber-600 text-white text-[10px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5 border border-amber-300/30">
+                      <Award className="w-3.5 h-3.5" />
+                      <span>Company Founder</span>
+                    </div>
+
+                    <div className="absolute -bottom-10 -right-10 w-36 h-36 bg-amber-400/20 rounded-full blur-2xl pointer-events-none"></div>
                   </div>
-                </div>
 
-                <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-[4px] bg-brand-charcoal/85 backdrop-blur-md border border-white/20 text-brand-gold text-[10px] font-extrabold uppercase tracking-widest shadow-md">
-                  Pillar 0{idx + 1}
-                </div>
+                  {/* Founder Content Area */}
+                  <div className="sm:w-3/5 p-6 sm:p-7 flex flex-col justify-between space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="inline-block px-3 py-1 rounded-[4px] bg-amber-50 text-amber-800 text-xs font-extrabold uppercase tracking-wider border border-amber-300/40">
+                          {founder.experience}
+                        </span>
+                        <div className="flex items-center gap-1 text-amber-600">
+                          <ShieldCheck className="w-5 h-5" />
+                        </div>
+                      </div>
 
-                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-brand-green/20 rounded-full blur-2xl pointer-events-none group-hover:bg-brand-gold/20 transition-colors"></div>
+                      <div>
+                        <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-brand-charcoal group-hover:text-brand-green transition-colors">
+                          {founder.name}
+                        </h3>
+                        <div className="text-xs sm:text-sm font-bold text-brand-gold uppercase tracking-wider mt-0.5">
+                          {founder.role} &amp; Construction Director
+                        </div>
+                      </div>
+
+                      <p className="text-xs sm:text-sm text-gray-700 leading-relaxed pt-1">
+                        {founder.description}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-semibold">
+                      <div className="flex items-center gap-1.5 text-brand-green">
+                        <Shield className="w-4 h-4" />
+                        <span>Strategic Leadership &amp; Direction</span>
+                      </div>
+                      <span className="text-[11px] text-amber-700 font-bold px-2 py-0.5 rounded-[4px] bg-amber-50 border border-amber-200">
+                        Head of Management
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* 2x2 Grid for Other Leadership Members with Photos */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                {otherMembers.map((member, idx) => (
+                  <motion.div 
+                    key={idx}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    whileHover={{ y: -6 }}
+                    className="bg-white rounded-[4px] overflow-hidden border border-gray-200/80 shadow-md hover:shadow-2xl hover:border-brand-green/60 transition-all group flex flex-col sm:flex-row"
+                  >
+                    {/* Portrait Visual Area */}
+                    <div className="sm:w-2/5 relative min-h-[230px] sm:min-h-[260px] bg-slate-900 flex items-center justify-center overflow-hidden shrink-0">
+                      {member.imageUrl ? (
+                        <img 
+                          src={member.imageUrl} 
+                          alt={member.name}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                      ) : (
+                        <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-[4px] bg-gradient-to-tr from-brand-green/30 via-emerald-500/10 to-brand-gold/30 border-2 border-white/20 p-2 shadow-2xl flex items-center justify-center group-hover:scale-105 group-hover:border-brand-green transition-all duration-500">
+                          <div className="w-full h-full rounded-[2px] bg-brand-charcoal/90 flex items-center justify-center text-brand-green shadow-inner">
+                            <User className="w-14 h-14 text-brand-green/90 group-hover:text-amber-300 transition-colors" />
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Soft gradient overlay at bottom of photo */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent pointer-events-none"></div>
+
+                      <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-[4px] bg-brand-charcoal/85 backdrop-blur-md border border-white/20 text-brand-gold text-[10px] font-extrabold uppercase tracking-widest shadow-md">
+                        Pillar 0{idx + 1}
+                      </div>
+                    </div>
+
+                    {/* Content Area */}
+                    <div className="sm:w-3/5 p-5 sm:p-6 flex flex-col justify-between space-y-3">
+                      <div className="space-y-1.5">
+                        <div className="flex items-center justify-between">
+                          <span className="inline-block px-2.5 py-0.5 rounded-[4px] bg-brand-lightGreen text-brand-green text-xs font-extrabold uppercase tracking-wider border border-brand-green/20">
+                            {member.experience}
+                          </span>
+                          <Award className="w-4 h-4 text-brand-gold" />
+                        </div>
+
+                        <h3 className="text-xl sm:text-2xl font-extrabold font-display text-brand-charcoal group-hover:text-brand-green transition-colors mt-1">
+                          {member.name}
+                        </h3>
+
+                        <div className="text-xs sm:text-sm font-bold text-brand-gold uppercase tracking-wider leading-snug">
+                          {member.role}
+                        </div>
+
+                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed pt-1">
+                          {member.description}
+                        </p>
+                      </div>
+
+                      <div className="pt-2.5 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-semibold">
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-
-              {/* Content Area */}
-              <div className="sm:w-3/5 p-5 sm:p-6 flex flex-col justify-between space-y-3">
-                <div className="space-y-1.5">
-                  <div className="flex items-center justify-between">
-                    <span className="inline-block px-2.5 py-0.5 rounded-[4px] bg-brand-lightGreen text-brand-green text-xs font-extrabold uppercase tracking-wider border border-brand-green/20">
-                      {member.experience}
-                    </span>
-                    <Award className="w-4 h-4 text-brand-gold" />
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl font-extrabold font-display text-brand-charcoal group-hover:text-brand-green transition-colors mt-1">
-                    {member.name}
-                  </h3>
-
-                  <div className="text-xs sm:text-sm font-bold text-brand-gold uppercase tracking-wider leading-snug">
-                    {member.role}
-                  </div>
-
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed pt-1">
-                    {member.description}
-                  </p>
-                </div>
-
-                <div className="pt-2.5 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-semibold">
-                  <div className="flex items-center gap-1.5 text-brand-green">
-                    <HardHat className="w-4 h-4" />
-                    <span>Civil Engineering Focus</span>
-                  </div>
-                  <span className="text-[11px] text-gray-400">Direct Supervision</span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+            </>
+          );
+        })()}
       </section>
 
       {/* 5. Creative "Why Choose KKR / The KKR Engineering Advantage" Section with Mobile/Tablet Carousel */}

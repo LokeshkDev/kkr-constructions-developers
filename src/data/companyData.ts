@@ -3,6 +3,8 @@ export interface TeamMember {
   role: string;
   experience: string;
   description: string;
+  imageUrl?: string;
+  isFounder?: boolean;
 }
 
 export interface ServiceItem {
@@ -67,27 +69,38 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Mr. Mohan Ram",
     role: "Founder",
     experience: "8+ Years Experience",
-    description: "Founded KKR Construction & Developers around 2024, bringing over 8 years of hands-on technical and management experience in the construction industry."
+    description: "Founded KKR Construction & Developers around 2024, bringing over 8 years of hands-on technical and management experience in the construction industry. Spearheads overall company leadership, strategic planning, and structural quality commitments.",
+    isFounder: true
   },
   {
     name: "Mr. Thangavel",
     role: "Managing Partner - Civil Engineering Professional",
     experience: "13 Years Experience",
-    description: "Brings 13 years of civil engineering professional expertise to manage complex structural projects and ensure precision engineering standards."
+    description: "Brings 13 years of civil engineering professional expertise to manage complex structural projects and ensure precision engineering standards.",
+    imageUrl: "/team/thangavelu.jpeg"
   },
   {
     name: "Mr. Pradeep",
     role: "Managing Partner - Civil Engineering Professional",
     experience: "8 Years Experience",
-    description: "Civil engineering professional with 8 years of experience overseeing site operations, project execution, and client satisfaction."
+    description: "Civil engineering professional with 8 years of experience overseeing site operations, project execution, and client satisfaction.",
+    imageUrl: "/team/pradeep.jpeg"
   },
   {
-    name: "Mr. Karthick",
+    name: "Mr. Mathavan",
+    role: "Civil Engineering Professional",
+    experience: "5 Years Experience",
+    description: "Civil engineering professional with 5 years of hands-on expertise in structural site execution, quality inspection, and project coordination.",
+    imageUrl: "/team/mathavan.jpeg"
+  },
+  {
+    name: "Mr. Karthik",
     role: "Business Executive Management",
     experience: "8 Years Experience",
-    description: "Business executive with 8 years of experience in managing client relations, project coordination, and operational efficiency for construction projects."
+    description: "Business executive with 8 years of experience in managing client relations, project coordination, and operational efficiency for construction projects.",
+    imageUrl: "/team/karthik.jpeg"
   }
-]
+];
 
 export const SERVICES: ServiceItem[] = [
   {

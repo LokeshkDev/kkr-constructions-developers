@@ -7,8 +7,7 @@ import {
   PhoneCall, 
   MessageCircle, 
   Calendar, 
-  Clock, 
-  ShieldCheck 
+  Clock
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 
@@ -81,11 +80,6 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
             >
               <X className="w-5 h-5" />
             </button>
-
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-[4px] bg-brand-green/20 text-brand-green text-[10px] font-extrabold uppercase tracking-wider border border-brand-green/30 mb-2">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>{isInspection ? 'Civil Site Inspection' : 'Free Project Estimation'}</span>
-            </div>
 
             <h3 className="text-xl sm:text-2xl font-extrabold font-display text-white">
               {isInspection ? 'Book On-Site Civil Inspection' : 'Request Free Project Quotation'}

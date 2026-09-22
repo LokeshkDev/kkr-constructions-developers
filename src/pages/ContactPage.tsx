@@ -108,9 +108,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-brand-charcoal">
                 Direct Leadership Phone Numbers
               </h2>
-              <p className="text-xs sm:text-sm text-gray-600">
-                Call our founders and civil engineering partners directly for fast responses and immediate site visit arrangements.
-              </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
@@ -219,9 +216,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-brand-charcoal">
                   KKR Construction &amp; Developers
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
-                  We welcome clients to our office for structural consultations, blueprint reviews, and construction agreements.
-                </p>
               </div>
 
               <div className="space-y-4 pt-1">

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { User, Shield, Award, HardHat } from 'lucide-react';
+import { User, Shield, HardHat } from 'lucide-react';
 import { COMPANY_INFO, TEAM_MEMBERS } from '../data/companyData';
 
 export const AboutSection: React.FC = () => {
@@ -96,8 +96,8 @@ export const AboutSection: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* 4 Card Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          {/* Team Members Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6">
             {TEAM_MEMBERS.map((member, idx) => (
               <motion.div 
                 key={idx}
@@ -109,10 +109,20 @@ export const AboutSection: React.FC = () => {
                 className="p-5 sm:p-6 rounded-[4px] bg-white border border-gray-200 shadow-sm hover:shadow-2xl hover:border-brand-green/60 transition-all group flex flex-col justify-between text-center"
               >
                 <div className="space-y-3.5">
-                  <div className="relative w-[100px] h-[100px] mx-auto rounded-[4px] overflow-hidden bg-brand-lightGreen border-2 border-brand-green/30 group-hover:border-brand-green transition-all shadow-md flex items-center justify-center text-brand-green group-hover:scale-105 shrink-0">
-                    <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-brand-lightGreen via-emerald-50 to-emerald-100/60">
-                      <User className="w-12 h-12 text-brand-green drop-shadow-sm" />
-                    </div>
+                  <div className="relative w-[100px] h-[100px] mx-auto rounded-[4px] overflow-hidden bg-brand-lightGreen border-2 border-brand-green/30 group-hover:border-brand-green transition-all shadow-md flex items-center justify-center text-brand-green group-hover:scale-105 shrink-0 bg-slate-900">
+                    {member.imageUrl ? (
+                      <img 
+                        src={member.imageUrl} 
+                        alt={member.name}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover object-top"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-brand-lightGreen via-emerald-50 to-emerald-100/60">
+                        <User className="w-12 h-12 text-brand-green drop-shadow-sm" />
+                      </div>
+                    )}
                   </div>
 
                   <div>
@@ -130,11 +140,6 @@ export const AboutSection: React.FC = () => {
                   <p className="text-xs text-gray-600 leading-relaxed text-center">
                     {member.description}
                   </p>
-                </div>
-
-                <div className="mt-5 pt-3.5 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-500">
-                  <span>Civil Engineering Focus</span>
-                  <Award className="w-4 h-4 text-brand-green" />
                 </div>
               </motion.div>
             ))}

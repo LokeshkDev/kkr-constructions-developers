@@ -136,18 +136,28 @@ export const ABOUT_PAGE_SCHEMAS = [
         '@type': 'Person',
         'name': 'Mr. Thangavel',
         'jobTitle': 'Managing Partner - Civil Engineering Professional',
+        'image': 'https://kkrconstruction.com/team/thangavelu.jpeg',
         'description': '13 years of civil engineering professional expertise managing structural precision and Mivan projects.'
       },
       {
         '@type': 'Person',
         'name': 'Mr. Pradeep',
         'jobTitle': 'Managing Partner - Civil Engineering Professional',
-        'description': '8 years of experience overseeing site execution, RCC staging, and structural durability.'
+        'image': 'https://kkrconstruction.com/team/pradeep.jpeg',
+        'description': '8 years of experience overseeing site operations, RCC staging, and structural durability.'
       },
       {
         '@type': 'Person',
-        'name': 'Mr. Karthick',
+        'name': 'Mr. Mathavan',
+        'jobTitle': 'Civil Engineering Professional',
+        'image': 'https://kkrconstruction.com/team/mathavan.jpeg',
+        'description': '5 years of hands-on expertise in structural site execution, quality inspection, and project coordination.'
+      },
+      {
+        '@type': 'Person',
+        'name': 'Mr. Karthik',
         'jobTitle': 'Business Executive Management',
+        'image': 'https://kkrconstruction.com/team/karthik.jpeg',
         'description': '8 years of experience in client coordination, blueprint estimations, and operational efficiency.'
       }
     ]
