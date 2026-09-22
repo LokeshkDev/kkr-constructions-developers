@@ -18,7 +18,6 @@ import {
   X,
   Repeat,
   RotateCw,
-  ArrowDown,
   Sparkles
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
