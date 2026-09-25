@@ -53,13 +53,13 @@ export const FloatingSupport: React.FC<FloatingSupportProps> = ({ onOpenQuoteMod
             className="absolute bottom-16 right-0 w-[88vw] max-w-xs bg-white rounded-[4px] shadow-2xl border border-gray-200 overflow-hidden mb-2"
           >
             {/* Header */}
-            <div className="bg-[#0A1118] text-white p-3.5 flex items-center justify-between border-b border-brand-green/30">
+            <div className="bg-[#05213e] text-white p-3.5 flex items-center justify-between border-b border-brand-green/30">
               <div className="flex items-center gap-2">
                 <div className="relative">
                   <div className="w-7 h-7 rounded-[4px] bg-brand-green text-white flex items-center justify-center">
                     <Headphones className="w-4 h-4" />
                   </div>
-                  <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-[#0A1118] animate-pulse"></span>
+                  <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-[#05213e] animate-pulse"></span>
                 </div>
                 <div>
                   <div className="text-xs font-bold font-display text-white">KKR Civil Support</div>

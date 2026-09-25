@@ -403,23 +403,36 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuoteMod
                   className="max-w-3xl mx-auto mb-8 sm:mb-10 bg-white rounded-[4px] overflow-hidden border-2 border-brand-green/40 shadow-xl hover:shadow-2xl hover:border-brand-green transition-all group flex flex-col sm:flex-row relative"
                 >
                   {/* Portrait Visual Area */}
-                  <div className="sm:w-2/5 relative min-h-[220px] sm:min-h-[260px] bg-gradient-to-br from-[#0B1510] via-brand-charcoal to-[#0A1A12] flex items-center justify-center overflow-hidden shrink-0">
-                    <div className="absolute inset-0 architectural-grid-dark opacity-30"></div>
-                    
-                    <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-[4px] bg-gradient-to-tr from-brand-gold/40 via-emerald-500/20 to-brand-green/40 border-2 border-amber-300/40 p-2 shadow-2xl flex items-center justify-center group-hover:scale-105 group-hover:border-amber-400 transition-all duration-500">
-                      <div className="w-full h-full rounded-[2px] bg-brand-charcoal/95 flex flex-col items-center justify-center text-amber-300 shadow-inner">
-                        <User className="w-14 h-14 sm:w-16 sm:h-16 text-amber-300 drop-shadow-sm group-hover:scale-110 transition-transform" />
-                        <span className="text-[10px] font-extrabold tracking-widest uppercase text-amber-300 mt-1">Founder</span>
-                      </div>
-                    </div>
+                  <div className="sm:w-2/5 relative min-h-[240px] sm:min-h-[280px] bg-slate-900 flex items-center justify-center overflow-hidden shrink-0">
+                    {founder.imageUrl ? (
+                      <img 
+                        src={founder.imageUrl} 
+                        alt={founder.name}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 architectural-grid-dark opacity-30"></div>
+                        <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-[4px] bg-gradient-to-tr from-brand-gold/40 via-emerald-500/20 to-brand-green/40 border-2 border-amber-300/40 p-2 shadow-2xl flex items-center justify-center group-hover:scale-105 group-hover:border-amber-400 transition-all duration-500">
+                          <div className="w-full h-full rounded-[2px] bg-brand-charcoal/95 flex flex-col items-center justify-center text-amber-300 shadow-inner">
+                            <User className="w-14 h-14 sm:w-16 sm:h-16 text-amber-300 drop-shadow-sm group-hover:scale-110 transition-transform" />
+                            <span className="text-[10px] font-extrabold tracking-widest uppercase text-amber-300 mt-1">Founder</span>
+                          </div>
+                        </div>
+                        <div className="absolute -bottom-10 -right-10 w-36 h-36 bg-amber-400/20 rounded-full blur-2xl pointer-events-none"></div>
+                      </>
+                    )}
+
+                    {/* Soft gradient overlay at bottom of photo */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent pointer-events-none"></div>
 
                     {/* Founder Badge */}
-                    <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-[4px] bg-gradient-to-r from-amber-500 to-amber-600 text-white text-[10px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5 border border-amber-300/30">
+                    <div className="absolute top-3.5 left-3.5 z-10 px-3 py-1 rounded-[4px] bg-gradient-to-r from-amber-500 to-amber-600 text-white text-[10px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5 border border-amber-300/30">
                       <Award className="w-3.5 h-3.5" />
                       <span>Company Founder</span>
                     </div>
-
-                    <div className="absolute -bottom-10 -right-10 w-36 h-36 bg-amber-400/20 rounded-full blur-2xl pointer-events-none"></div>
                   </div>
 
                   {/* Founder Content Area */}

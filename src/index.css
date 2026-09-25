@@ -69,5 +69,8 @@
   -ms-overflow-style: none !important;  /* IE and Edge */
   scrollbar-width: none !important;  /* Firefox */
 }
+.bg-brand-charcoal{
+  background-color: rgb(7 46 86  / var(--tw-bg-opacity, 1));
+}
 
 

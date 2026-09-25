@@ -532,10 +532,6 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ serviceId,
 
           {/* Overlay Caption Bar with High Contrast */}
           <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-4 sm:p-6">
-            <div className="text-xs font-bold text-amber-300 uppercase tracking-widest flex items-center gap-2">
-              <span className="w-2 h-2 rounded-[2px] bg-amber-400"></span>
-              <span>Live On-Site Execution</span>
-            </div>
             <div className="text-sm sm:text-base md:text-lg font-bold text-white mt-1 leading-snug drop-shadow-md">
               {service.images[activeImageIdx].caption}
             </div>

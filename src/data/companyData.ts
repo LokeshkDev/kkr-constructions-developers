@@ -70,6 +70,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Founder",
     experience: "8+ Years Experience",
     description: "Founded KKR Construction & Developers around 2024, bringing over 8 years of hands-on technical and management experience in the construction industry. Spearheads overall company leadership, strategic planning, and structural quality commitments.",
+    imageUrl: "/team/mohan-ram-founder-kkr-construction-and-developers.jpeg",
     isFounder: true
   },
   {

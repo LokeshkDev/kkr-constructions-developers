@@ -100,7 +100,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300">
       {/* Top Utility Bar - Clean Header Strip with Theme Colors */}
-      <div className={`bg-[#0A1118] text-gray-300 text-xs border-b border-brand-green/20 transition-all duration-300 ${isScrolled ? 'hidden md:block py-1' : 'py-1.5'}`}>
+      <div className={`bg-[#05213e] text-gray-300 text-xs border-b border-brand-green/20 transition-all duration-300 ${isScrolled ? 'hidden md:block py-1' : 'py-1.5'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
           {/* Left: Address */}
           <div className="flex items-center gap-2 text-gray-300 truncate">

@@ -101,14 +101,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             </motion.h1>
 
             {/* Subheading with Text Shadow for pure image visibility */}
-            <motion.p 
+            {/* <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
               className="text-white text-xs sm:text-base lg:text-lg max-w-2xl leading-relaxed font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] [text-shadow:_0_2px_8px_rgba(0,0,0,1)]"
             >
               Utilizing lightweight reusable aluminum formwork for 30–40% faster execution, smooth monolithic concrete finishes, and high seismic resistance.
-            </motion.p>
+            </motion.p> */}
 
             {/* Animated Interactive CTA Buttons */}
             <motion.div 

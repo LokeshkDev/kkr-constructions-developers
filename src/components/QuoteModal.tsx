@@ -72,7 +72,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
           className="bg-white rounded-[4px] max-w-2xl w-full overflow-hidden shadow-2xl border border-gray-200 relative my-auto max-h-[90vh] sm:max-h-[86vh] flex flex-col"
         >
           {/* Header */}
-          <div className="bg-[#0A1118] text-white p-4 sm:p-6 relative border-b border-brand-green/30 shrink-0">
+          <div className="bg-[#05213e] text-white p-4 sm:p-6 relative border-b border-brand-green/30 shrink-0">
             <button
               onClick={onClose}
               className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 p-2 rounded-[4px] bg-white/10 hover:bg-white/20 text-white transition-colors z-20 cursor-pointer"

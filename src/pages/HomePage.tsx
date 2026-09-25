@@ -549,7 +549,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuoteModal
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-[#0A1118] rounded-[4px] max-w-4xl w-full overflow-hidden shadow-2xl border border-gray-800 relative flex flex-col max-h-[92vh]"
+              className="bg-[#05213e] rounded-[4px] max-w-4xl w-full overflow-hidden shadow-2xl border border-gray-800 relative flex flex-col max-h-[92vh]"
             >
               {/* Close Button */}
               <button
@@ -606,7 +606,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuoteModal
 
       {/* 6. Consultation CTA Banner */}
       <section className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="rounded-[4px] bg-gradient-to-r from-[#0A1118] via-brand-charcoal to-[#0A1118] text-white p-8 sm:p-12 relative overflow-hidden border border-brand-green/30 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="rounded-[4px] bg-gradient-to-r from-[#05213e] via-brand-charcoal to-[#05213e] text-white p-8 sm:p-12 relative overflow-hidden border border-brand-green/30 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <span className="text-xs font-bold text-brand-gold uppercase tracking-wider">Connect With Our Civil Engineers</span>
             <h3 className="text-2xl sm:text-3xl font-extrabold font-display">
