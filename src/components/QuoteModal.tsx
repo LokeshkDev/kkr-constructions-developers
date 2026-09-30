@@ -7,9 +7,12 @@ import {
   PhoneCall, 
   MessageCircle, 
   Calendar, 
-  Clock
+  Clock,
+  Loader2,
+  AlertCircle
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
+import { submitEnquiry } from '../services/enquiryService';
 
 export interface QuoteModalProps {
   isOpen: boolean;
@@ -39,10 +42,15 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [customerEmailed, setCustomerEmailed] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
       setIsSubmitted(false);
+      setSubmitError(null);
+      setCustomerEmailed(false);
       setFormData(prev => ({
         ...prev,
         serviceType: defaultService || 'Residential Construction (Villas / G+3)'
@@ -50,9 +58,33 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
     }
   }, [isOpen, defaultService]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    if (!formData.name || !formData.phone) return;
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    const result = await submitEnquiry({
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email || undefined,
+      serviceType: formData.serviceType,
+      area: formData.area || undefined,
+      location: formData.location || undefined,
+      preferredDate: isInspection ? formData.preferredDate || undefined : undefined,
+      preferredSlot: isInspection ? formData.preferredSlot || undefined : undefined,
+      message: formData.message || undefined,
+      formSource: isInspection ? 'Quote Modal - On-Site Civil Inspection' : 'Quote Modal - Free Project Quotation',
+    });
+
+    setIsSubmitting(false);
+
+    if (result.success) {
+      setIsSubmitted(true);
+      setCustomerEmailed(!!result.customerSent);
+    } else {
+      setSubmitError(result.message);
+    }
   };
 
   if (!isOpen) return null;
@@ -108,6 +140,12 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 <p className="text-xs sm:text-sm text-gray-700 max-w-md mx-auto leading-relaxed">
                   Thank you, <strong>{formData.name || 'Valued Client'}</strong>. Our civil engineering team has received your request for <strong>{formData.serviceType}</strong> at <strong>{formData.location || 'your site'}</strong>. We will reach out to <strong>{formData.phone}</strong> within 24 hours.
                 </p>
+
+                {customerEmailed && (
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-[4px] bg-emerald-50 text-emerald-800 text-xs font-semibold border border-emerald-200 shadow-xs">
+                    <span>✓ A detailed confirmation email has been dispatched to {formData.email}</span>
+                  </div>
+                )}
 
                 <div className="pt-4 flex flex-row gap-2.5 sm:gap-3 justify-center max-w-md mx-auto w-full">
                   <a
@@ -277,13 +315,30 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                   />
                 </div>
 
+                {submitError && (
+                  <div className="p-3 rounded-[4px] bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 shrink-0 text-red-500" />
+                    <span>{submitError}</span>
+                  </div>
+                )}
+
                 {/* Submit button */}
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-6 rounded-[4px] bg-brand-green text-white font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-brand-darkGreen transition-all shadow-lg hover:shadow-brand-green/30 flex items-center justify-center gap-2 border border-emerald-400/30 active:scale-98"
+                  disabled={isSubmitting}
+                  className="w-full py-3.5 px-6 rounded-[4px] bg-brand-green text-white font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-brand-darkGreen transition-all shadow-lg hover:shadow-brand-green/30 flex items-center justify-center gap-2 border border-emerald-400/30 active:scale-98 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>{isInspection ? 'Confirm On-Site Inspection Request' : 'Submit Quotation Request'}</span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Processing Request...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>{isInspection ? 'Confirm On-Site Inspection Request' : 'Submit Quotation Request'}</span>
+                    </>
+                  )}
                 </button>
 
                 {/* Founder Direct Assistance Callout */}

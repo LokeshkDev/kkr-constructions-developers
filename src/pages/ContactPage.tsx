@@ -7,11 +7,14 @@ import {
   Send, 
   Clock, 
   CheckCircle2,
-  ExternalLink
+  ExternalLink,
+  Loader2,
+  AlertCircle
 } from 'lucide-react';
 import { COMPANY_INFO, TEAM_MEMBERS } from '../data/companyData';
 import { SEO } from '../components/SEO';
 import { CONTACT_PAGE_SCHEMAS } from '../data/seoSchemas';
+import { submitEnquiry } from '../services/enquiryService';
 
 interface ContactPageProps {
   onNavigate: (page: string) => void;
@@ -27,10 +30,33 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [customerEmailed, setCustomerEmailed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!formData.name || !formData.phone) return;
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    const result = await submitEnquiry({
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email || undefined,
+      serviceType: formData.serviceType,
+      message: formData.message || undefined,
+      formSource: 'Contact Page Consultation Request',
+    });
+
+    setIsSubmitting(false);
+
+    if (result.success) {
+      setSubmitted(true);
+      setCustomerEmailed(!!result.customerSent);
+    } else {
+      setSubmitError(result.message);
+    }
   };
 
   return (
@@ -298,6 +324,11 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 <p className="text-xs sm:text-sm text-gray-700 max-w-md mx-auto leading-relaxed">
                   Your inquiry for <strong>{formData.serviceType}</strong> has been received. Mr. Mohan Ram or our civil engineering team will reach out at <strong>{formData.phone}</strong> shortly.
                 </p>
+                {customerEmailed && (
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-[4px] bg-emerald-100 text-emerald-800 text-xs font-semibold border border-emerald-300 shadow-xs">
+                    <span>✓ A confirmation email has been dispatched to {formData.email}</span>
+                  </div>
+                )}
                 <button
                   onClick={() => {
                     setSubmitted(false);
@@ -391,13 +422,30 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   ></textarea>
                 </div>
 
+                {submitError && (
+                  <div className="p-3.5 rounded-[4px] bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 shrink-0 text-red-500" />
+                    <span>{submitError}</span>
+                  </div>
+                )}
+
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full py-4 px-6 rounded-[4px] bg-brand-green text-white font-bold text-sm uppercase tracking-wider hover:bg-brand-darkGreen transition-all shadow-lg hover:shadow-brand-green/30 flex items-center justify-center gap-2 border border-emerald-400/30 active:scale-98"
+                  disabled={isSubmitting}
+                  className="w-full py-4 px-6 rounded-[4px] bg-brand-green text-white font-bold text-sm uppercase tracking-wider hover:bg-brand-darkGreen transition-all shadow-lg hover:shadow-brand-green/30 flex items-center justify-center gap-2 border border-emerald-400/30 active:scale-98 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>Submit Project Consultation Request</span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Sending Consultation Request...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>Submit Project Consultation Request</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}

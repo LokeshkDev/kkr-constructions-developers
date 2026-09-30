@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, Check, ExternalLink, Filter, X } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Check, ExternalLink, Filter, X, Loader2, AlertCircle } from 'lucide-react';
 import { PROJECTS_DATA, PROJECT_CATEGORIES, COMPANY_INFO, ProjectItem } from '../data/companyData';
+import { submitEnquiry } from '../services/enquiryService';
 
 export const ProjectsAndContactSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -15,25 +16,48 @@ export const ProjectsAndContactSection: React.FC = () => {
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [customerEmailed, setCustomerEmailed] = useState(false);
 
   const filteredProjects = selectedCategory === 'All' 
     ? PROJECTS_DATA 
     : PROJECTS_DATA.filter(p => p.category === selectedCategory);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) return;
-    setFormSubmitted(true);
-    setTimeout(() => {
-      setFormSubmitted(false);
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        projectType: 'Residential Construction',
-        message: ''
-      });
-    }, 5000);
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    const result = await submitEnquiry({
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email || undefined,
+      projectType: formData.projectType,
+      serviceType: formData.projectType,
+      message: formData.message || undefined,
+      formSource: 'Homepage Project Consultation Form',
+    });
+
+    setIsSubmitting(false);
+
+    if (result.success) {
+      setFormSubmitted(true);
+      setCustomerEmailed(!!result.customerSent);
+      setTimeout(() => {
+        setFormSubmitted(false);
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          projectType: 'Residential Construction',
+          message: ''
+        });
+      }, 7000);
+    } else {
+      setSubmitError(result.message);
+    }
   };
 
   return (
@@ -262,13 +286,18 @@ export const ProjectsAndContactSection: React.FC = () => {
 
               {formSubmitted ? (
                 <div className="p-6 rounded-[4px] bg-brand-green/20 border border-brand-green text-center space-y-3">
-                  <div className="w-12 h-12 rounded-[4px] bg-brand-green text-white flex items-center justify-center mx-auto">
+                  <div className="w-12 h-12 rounded-[4px] bg-brand-green text-white flex items-center justify-center mx-auto shadow-md">
                     <Check className="w-6 h-6" />
                   </div>
                   <h4 className="text-lg font-bold text-white">Inquiry Received Successfully</h4>
                   <p className="text-xs text-gray-300">
-                    Thank you, {formData.name}. Our team will review your project details and contact you back via phone/email shortly.
+                    Thank you, <strong>{formData.name}</strong>. Our civil engineering team has been notified. We will review your project details and contact you via phone/email shortly.
                   </p>
+                  {customerEmailed && (
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[4px] bg-emerald-500/20 text-emerald-300 text-[11px] font-semibold border border-emerald-400/30">
+                      <span>✓ A confirmation email has been dispatched to {formData.email}</span>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -335,12 +364,29 @@ export const ProjectsAndContactSection: React.FC = () => {
                     ></textarea>
                   </div>
 
+                  {submitError && (
+                    <div className="p-3 rounded-[4px] bg-red-900/60 border border-red-500/50 text-red-200 text-xs flex items-center gap-2">
+                      <AlertCircle className="w-4 h-4 shrink-0 text-red-400" />
+                      <span>{submitError}</span>
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-[4px] bg-brand-green text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-darkGreen transition-colors flex items-center justify-center gap-2 shadow-lg border border-emerald-400/30"
+                    disabled={isSubmitting}
+                    className="w-full py-4 rounded-[4px] bg-brand-green text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-darkGreen transition-colors flex items-center justify-center gap-2 shadow-lg border border-emerald-400/30 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-4 h-4" />
-                    <span>Submit Project Inquiry</span>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        <span>Sending Inquiry...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4" />
+                        <span>Submit Project Inquiry</span>
+                      </>
+                    )}
                   </button>
                 </form>
               )}
