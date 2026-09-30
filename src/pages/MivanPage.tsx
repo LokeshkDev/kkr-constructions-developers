@@ -35,7 +35,7 @@ const MIVAN_GALLERY_STAGES = [
     title: "Heavy Rebar Grilling & Steel Binding",
     phase: "Phase 01: Reinforcement Framework",
     desc: "Certified Fe550 TMT high-yield rebar cages meticulously bound with laser-verified spacing, concrete cover blocks, and integrated electrical conduits before formwork closure.",
-    imageUrl: "/images/mivan/mivan-technology-grilling-beam-construction-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-grilling-beam-construction-kkr-constructions-and-developers.webp",
     metric: "Fe550 High-Yield Steel"
   },
   {
@@ -43,7 +43,7 @@ const MIVAN_GALLERY_STAGES = [
     title: "Aluminum Formwork Modular Erection",
     phase: "Phase 02: Precision Shuttering",
     desc: "Lightweight 6061-T6 aluminum alloy panels locked with drop-head pins and wedges, creating airtight mold boundaries without wooden props or nails.",
-    imageUrl: "/images/mivan/mivan-technology-beam-build-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-beam-build-kkr-constructions-and-developers.webp",
     metric: "Sub-Millimeter Tolerances"
   },
   {
@@ -51,7 +51,7 @@ const MIVAN_GALLERY_STAGES = [
     title: "Integrated Column & Pillar Alignment",
     phase: "Phase 03: Vertical Framework",
     desc: "Laser-aligned vertical column shuttering reinforced with heavy-duty tie rods and wallers to withstand high hydrostatic concrete pressure during rapid pours.",
-    imageUrl: "/images/mivan/mivan-technology-beam-pillar-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-beam-pillar-kkr-constructions-and-developers.webp",
     metric: "Hydrostatic Pressure Rated"
   },
   {
@@ -59,7 +59,7 @@ const MIVAN_GALLERY_STAGES = [
     title: "Monolithic Deck & Floor Slab Staging",
     phase: "Phase 04: Deck Formwork",
     desc: "Aluminum deck panels laid with prop-head support systems, enabling continuous, single-stage pouring of structural walls and roof slabs simultaneously.",
-    imageUrl: "/images/mivan/mivan-technology-slab-construction-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-slab-construction-kkr-constructions-and-developers.webp",
     metric: "Single-Pour Monolith"
   },
   {
@@ -67,7 +67,7 @@ const MIVAN_GALLERY_STAGES = [
     title: "High-Density Concrete Pour & Compaction",
     phase: "Phase 05: Monolithic Casting",
     desc: "Continuous pouring of M25/M30 grade concrete with mechanical needle vibrator compaction, completely eliminating air pockets, voids, and honeycomb defects.",
-    imageUrl: "/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.webp",
     metric: "M25/M30 Monolithic Pour"
   },
   {
@@ -75,7 +75,7 @@ const MIVAN_GALLERY_STAGES = [
     title: "Joint Sealing & Damp-Proof Barrier",
     phase: "Phase 06: De-Shuttering & Finish",
     desc: "Rapid wall de-shuttering within 12–16 hours revealing ultra-smooth, moisture-impermeable concrete walls with zero brick mortar joint lines.",
-    imageUrl: "/images/mivan/mivan-technology-sealing-construction-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-sealing-construction-kkr-constructions-and-developers.webp",
     metric: "100% Water-Tight Shell"
   },
   {
@@ -83,7 +83,7 @@ const MIVAN_GALLERY_STAGES = [
     title: "Before & After Structural Excellence",
     phase: "Phase 07: Finished Monolith vs Brickwork",
     desc: "Dramatic visual difference comparing porous traditional brickwork requiring thick plaster against laser-smooth monolithic Mivan concrete.",
-    imageUrl: "/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.webp",
     metric: "Zero Plastering Required"
   }
 ];
@@ -152,7 +152,7 @@ const COST_COMPARISON_DATA = [
     iconName: "clock" as const,
     benchmarkMetric: "7–10 Days vs 25 Days",
     engineeringStandard: "IS 456 Rapid Curing Protocol",
-    imageUrl: "/images/mivan/construction-speed-and-floor-cycle-kkr-construction-and-developers.png",
+    imageUrl: "/images/mivan/construction-speed-and-floor-cycle-kkr-construction-and-developers.webp",
     imageCaption: "Rapid 7–10 Day Monolithic Turnaround vs Multi-Stage Brick Masonry Staging",
     traditional: {
       badge: "Traditional Brickwork",
@@ -179,7 +179,7 @@ const COST_COMPARISON_DATA = [
     iconName: "layers" as const,
     benchmarkMetric: "Zero Plaster vs 20mm Sand Plaster",
     engineeringStandard: "Sub-Millimeter 6061-T6 Aluminum Mold",
-    imageUrl: "/images/mivan/mivan-technology-wall-ceiling-plastering-cost-kkr-construction-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-wall-ceiling-plastering-cost-kkr-construction-and-developers.webp",
     imageCaption: "Mirror-Smooth Aluminum Finish (0mm Plaster) vs Rough Sand-Cement Mortar Plastering",
     traditional: {
       badge: "Traditional Brickwork",
@@ -206,7 +206,7 @@ const COST_COMPARISON_DATA = [
     iconName: "maximize" as const,
     benchmarkMetric: "120mm Shear Wall vs 230mm Brick",
     engineeringStandard: "High-Strength Structural Shear Box",
-    imageUrl: "/images/mivan/mivan-technology-Carpet-Area-Usable-Space-Gain-kkr-construction-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-Carpet-Area-Usable-Space-Gain-kkr-construction-and-developers.webp",
     imageCaption: "Slender 120mm Monolithic Shear Wall Profile vs Bulky 230mm (9-Inch) Brick Footprint (+5% Carpet Gain)",
     traditional: {
       badge: "Traditional Brickwork",
@@ -233,7 +233,7 @@ const COST_COMPARISON_DATA = [
     iconName: "shield" as const,
     benchmarkMetric: "Monolith Box vs 10,000+ Seams",
     engineeringStandard: "Continuous Single-Stage Monolithic Pour",
-    imageUrl: "/images/mivan/mivan-technology-Seepage-and-Long-Term-Maintenance-kkr-construction-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-Seepage-and-Long-Term-Maintenance-kkr-construction-and-developers.webp",
     imageCaption: "100% Watertight Monolithic Shell vs Thousands of Porous Mortar Joint Seepage Micro-Cracks",
     traditional: {
       badge: "Traditional Brickwork",
@@ -260,7 +260,7 @@ const COST_COMPARISON_DATA = [
     iconName: "trash" as const,
     benchmarkMetric: "<1% Reusable vs 15% Waste Scrap",
     engineeringStandard: "250+ Reusable Aluminum Panels",
-    imageUrl: "/images/mivan/mivan-technology-material-wastage-and-Site-Scrap-kkr-construction-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-material-wastage-and-Site-Scrap-kkr-construction-and-developers.webp",
     imageCaption: "Zero-Waste Reusable Modular Aluminum Formwork vs Broken Masonry Scrap & Mortar Debris",
     traditional: {
       badge: "Traditional Brickwork",
@@ -287,7 +287,7 @@ const COST_COMPARISON_DATA = [
     iconName: "coins" as const,
     benchmarkMetric: "Immediate Cashflow vs 6-Mo Delay",
     engineeringStandard: "Accelerated Capital Turnover",
-    imageUrl: "/images/mivan/mivan-technology-Early-ROI-and-Rental-Generation-kkr-construction-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-Early-ROI-and-Rental-Generation-kkr-construction-and-developers.webp",
     imageCaption: "Immediate Tenant Handover & Early Rental Income vs Prolonged Construction Staging Loss",
     traditional: {
       badge: "Traditional Brickwork",
@@ -395,7 +395,7 @@ export const MivanPage: React.FC<MivanPageProps> = ({ onNavigate, onOpenQuoteMod
         canonicalUrl="/mivan-technology"
         keywords="Mivan Construction Thiruvallur, Aluminum Formwork Chennai, Monolithic Concrete Walls, Mivan Technology Tamil Nadu, Fast Construction Method, Seismic Resistant Buildings"
         ogType="article"
-        ogImage="/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.png"
+        ogImage="/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.webp"
         schemaData={[BASE_BUSINESS_SCHEMA, ...MIVAN_PAGE_SCHEMAS]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -492,7 +492,7 @@ export const MivanPage: React.FC<MivanPageProps> = ({ onNavigate, onOpenQuoteMod
             >
               <div className="relative rounded-[4px] overflow-hidden border border-white/20 shadow-2xl bg-slate-900 group">
                 <img 
-                  src="/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.png" 
+                  src="/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.webp" 
                   alt="KKR Mivan Formwork Monolithic Finish" 
                   loading="lazy"
                   decoding="async"
@@ -906,7 +906,7 @@ export const MivanPage: React.FC<MivanPageProps> = ({ onNavigate, onOpenQuoteMod
           {/* High-Resolution 3D Structural Cross-Section Image */}
           <div 
             onClick={() => setZoomedImage({
-              src: "/images/mivan/mivan-tech-shear-wall-kkr-construction-and-developers.png",
+              src: "/images/mivan/mivan-tech-shear-wall-kkr-construction-and-developers.webp",
               alt: "Conventional Wall 260mm vs KKR-Style Shear Wall 120mm Architectural Cross-Section",
               title: "Cross-Section: 260mm Conventional Wall vs 120mm KKR Shear Wall",
               caption: "Architectural comparison showing 140mm thickness difference, eliminated plaster layer, and monolithic seepage barrier."
@@ -914,7 +914,7 @@ export const MivanPage: React.FC<MivanPageProps> = ({ onNavigate, onOpenQuoteMod
             className="w-full rounded-[4px] overflow-hidden border border-gray-200 bg-slate-950/5 relative mb-4 cursor-zoom-in group"
           >
             <img 
-              src="/images/mivan/mivan-tech-shear-wall-kkr-construction-and-developers.png"
+              src="/images/mivan/mivan-tech-shear-wall-kkr-construction-and-developers.webp"
               alt="Conventional Wall 260mm vs KKR-Style Shear Wall 120mm Architectural Cross-Section" 
               loading="lazy"
               decoding="async"

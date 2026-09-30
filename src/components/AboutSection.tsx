@@ -61,7 +61,7 @@ export const AboutSection: React.FC = () => {
           >
             <div className="relative rounded-[4px] overflow-hidden shadow-2xl border border-gray-200 group">
               <img 
-                src="/about-kkr-construction-developers.png" 
+                src="/about-kkr-construction-developers.webp" 
                 alt="KKR Construction & Developers Office Building" 
                 loading="lazy"
                 decoding="async"

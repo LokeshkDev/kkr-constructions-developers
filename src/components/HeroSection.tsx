@@ -65,7 +65,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
         {/* Background Image - 100% Original without any Color Overlay - Optimized for LCP */}
         <div className="absolute inset-0 overflow-hidden">
           <img 
-            src="/homepage-banner-kkr-construction-developers.png" 
+            src="/homepage-banner-kkr-construction-developers.webp" 
             alt="KKR Construction Mivan Formwork Site"
             loading="eager"
             // @ts-ignore

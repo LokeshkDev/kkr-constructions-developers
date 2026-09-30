@@ -4,102 +4,131 @@
   
   <!-- Home Page -->
   <url>
-    <loc>https://kkrconstruction.com/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://www.kkrconstructiondevelopers.in/</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://kkrconstruction.com/homepage-banner-kkr-construction-developers.png</image:loc>
+      <image:loc>https://www.kkrconstructiondevelopers.in/homepage-banner-kkr-construction-developers.webp</image:loc>
       <image:title>KKR Construction and Developers Thiruvallur Chennai</image:title>
+      <image:caption>Civil Engineering and Advanced Mivan Construction Solutions in Thiruvallur</image:caption>
     </image:image>
   </url>
 
   <!-- About Us -->
   <url>
-    <loc>https://kkrconstruction.com/about</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://www.kkrconstructiondevelopers.in/about</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://kkrconstruction.com/about-kkr-construction-developers.png</image:loc>
+      <image:loc>https://www.kkrconstructiondevelopers.in/about-kkr-construction-developers.webp</image:loc>
       <image:title>KKR Construction Headquarters and Leadership</image:title>
+      <image:caption>Founder Mr. Mohan Ram and Civil Engineering Team at KKR Construction</image:caption>
     </image:image>
   </url>
 
   <!-- Services Index -->
   <url>
-    <loc>https://kkrconstruction.com/services</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://www.kkrconstructiondevelopers.in/services</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.kkrconstructiondevelopers.in/images/services/service-of-kkr-constrcutions-developer.webp</image:loc>
+      <image:title>Civil Engineering and Building Construction Services</image:title>
+      <image:caption>Comprehensive construction solutions from foundation to interior handover</image:caption>
+    </image:image>
   </url>
 
   <!-- Service Detail: Residential Construction -->
   <url>
-    <loc>https://kkrconstruction.com/services/residential-construction</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://www.kkrconstructiondevelopers.in/services/residential-construction</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://kkrconstruction.com/images/services/residential-construction-service-detail-kkr-constrcutions-developer.png</image:loc>
+      <image:loc>https://www.kkrconstructiondevelopers.in/images/services/residential-construction-service-detail-kkr-constrcutions-developer.webp</image:loc>
       <image:title>Turnkey Residential Villa and Apartment Construction</image:title>
+      <image:caption>Custom villas, duplexes, and multi-family residential apartments in Thiruvallur</image:caption>
     </image:image>
   </url>
 
   <!-- Service Detail: Commercial Construction -->
   <url>
-    <loc>https://kkrconstruction.com/services/commercial-construction</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://www.kkrconstructiondevelopers.in/services/commercial-construction</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://kkrconstruction.com/images/services/commercial-construction1-kkr-constrcutions-developer.png</image:loc>
+      <image:loc>https://www.kkrconstructiondevelopers.in/images/services/commercial-construction1-kkr-constrcutions-developer.webp</image:loc>
       <image:title>Commercial Complexes and Banking Strongroom Construction</image:title>
+      <image:caption>Heavy-duty commercial complexes, corporate offices, and institutional facilities</image:caption>
     </image:image>
   </url>
 
-  <!-- Service Detail: Interior Design & Engineering -->
+  <!-- Service Detail: Interior Design & Space Planning -->
   <url>
-    <loc>https://kkrconstruction.com/services/interior-design-engineering</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://www.kkrconstructiondevelopers.in/services/interior-design-engineering</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <!-- Service Detail: Concrete & Structural Works -->
-  <url>
-    <loc>https://kkrconstruction.com/services/concrete-structural-works</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Mivan Aluminum Formwork Technology -->
-  <url>
-    <loc>https://kkrconstruction.com/mivan-technology</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
     <image:image>
-      <image:loc>https://kkrconstruction.com/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.png</image:loc>
-      <image:title>Mivan Aluminum Formwork Monolithic Concrete Pouring</image:title>
+      <image:loc>https://www.kkrconstructiondevelopers.in/images/services/residential-construction-service2-detail-kkr-constrcutions-developer.webp</image:loc>
+      <image:title>Architectural Interior Design and Space Planning</image:title>
+      <image:caption>Custom modular interiors, false ceilings, lighting, and premium finishes</image:caption>
     </image:image>
   </url>
 
-  <!-- Project Gallery -->
+  <!-- Service Detail: Concrete & Structural Engineering Works -->
   <url>
-    <loc>https://kkrconstruction.com/project-gallery</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.kkrconstructiondevelopers.in/services/concrete-structural-works</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.kkrconstructiondevelopers.in/images/services/residential-construction-service3-detail-kkr-constrcutions-developer.webp</image:loc>
+      <image:title>Raft Foundation and Concrete Structural Engineering</image:title>
+      <image:caption>Engineered foundations, seismic-rated RCC frames, and high-strength concrete structures</image:caption>
+    </image:image>
   </url>
 
-  <!-- Contact Us -->
+  <!-- Mivan Technology Showcase -->
   <url>
-    <loc>https://kkrconstruction.com/contact</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://www.kkrconstructiondevelopers.in/mivan-technology</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.kkrconstructiondevelopers.in/images/mivan/mivan-tech-shear-wall-kkr-construction-and-developers.webp</image:loc>
+      <image:title>Advanced Mivan Aluminum Formwork System</image:title>
+      <image:caption>Monolithic shear wall casting and rapid 7-day slab cycles</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kkrconstructiondevelopers.in/images/mivan/construction-speed-and-floor-cycle-kkr-construction-and-developers.webp</image:loc>
+      <image:title>Mivan Speed and Floor Construction Cycle</image:title>
+    </image:image>
+  </url>
+
+  <!-- Projects Gallery / Portfolio -->
+  <url>
+    <loc>https://www.kkrconstructiondevelopers.in/project-gallery</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.kkrconstructiondevelopers.in/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.webp</image:loc>
+      <image:title>KKR Construction Project Gallery</image:title>
+      <image:caption>Real completed and ongoing construction projects across Thiruvallur and Chennai</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact Us / Consultation / Site Inspection -->
+  <url>
+    <loc>https://www.kkrconstructiondevelopers.in/contact</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

@@ -5,17 +5,17 @@
 export const BASE_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': ['ConstructionBusiness', 'LocalBusiness', 'GeneralContractor'],
-  '@id': 'https://kkrconstruction.com/#organization',
+  '@id': 'https://www.kkrconstructiondevelopers.in/#organization',
   'name': 'KKR Construction & Developers',
   'alternateName': ['KKR Construction', 'KKR Developers', 'KKR Constructions Thiruvallur'],
-  'url': 'https://kkrconstruction.com/',
+  'url': 'https://www.kkrconstructiondevelopers.in/',
   'logo': {
     '@type': 'ImageObject',
-    'url': 'https://kkrconstruction.com/logo.png',
+    'url': 'https://www.kkrconstructiondevelopers.in/logo.png',
     'width': 512,
     'height': 512
   },
-  'image': 'https://kkrconstruction.com/about-kkr-construction-developers.png',
+  'image': 'https://www.kkrconstructiondevelopers.in/about-kkr-construction-developers.webp',
   'description': 'KKR Construction & Developers provides civil engineering, residential construction, commercial buildings, interior engineering, and specialized Mivan aluminum formwork technology across Thiruvallur, Chennai, and northern Tamil Nadu.',
   'telephone': ['+918072183386', '+917550331045', '+919894868457', '+918098987756'],
   'email': 'kkrconstructiondevelopers@gmail.com',
@@ -94,12 +94,12 @@ export const HOME_PAGE_SCHEMAS = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://kkrconstruction.com/#website',
-    'url': 'https://kkrconstruction.com/',
+    '@id': 'https://www.kkrconstructiondevelopers.in/#website',
+    'url': 'https://www.kkrconstructiondevelopers.in/',
     'name': 'KKR Construction & Developers',
     'description': 'Premier Civil Engineering, Construction & Mivan Formwork Developers in Thiruvallur & Chennai',
     'publisher': {
-      '@id': 'https://kkrconstruction.com/#organization'
+      '@id': 'https://www.kkrconstructiondevelopers.in/#organization'
     },
     'inLanguage': 'en-US'
   }
@@ -109,21 +109,21 @@ export const ABOUT_PAGE_SCHEMAS = [
   {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    '@id': 'https://kkrconstruction.com/about#webpage',
-    'url': 'https://kkrconstruction.com/about',
+    '@id': 'https://www.kkrconstructiondevelopers.in/about#webpage',
+    'url': 'https://www.kkrconstructiondevelopers.in/about',
     'name': 'About KKR Construction & Developers - Engineering Heritage & Leadership',
     'isPartOf': {
-      '@id': 'https://kkrconstruction.com/#website'
+      '@id': 'https://www.kkrconstructiondevelopers.in/#website'
     },
     'about': {
-      '@id': 'https://kkrconstruction.com/#organization'
+      '@id': 'https://www.kkrconstructiondevelopers.in/#organization'
     },
     'description': 'Discover the engineering heritage, leadership team, and foundational principles behind KKR Construction & Developers, founded by Mr. Mohan Ram and managed by senior civil engineers Mr. Thangavel and Mr. Pradeep.'
   },
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://kkrconstruction.com/#organization',
+    '@id': 'https://www.kkrconstructiondevelopers.in/#organization',
     'name': 'KKR Construction & Developers',
     'member': [
       {
@@ -136,28 +136,28 @@ export const ABOUT_PAGE_SCHEMAS = [
         '@type': 'Person',
         'name': 'Mr. Thangavel',
         'jobTitle': 'Managing Partner - Civil Engineering Professional',
-        'image': 'https://kkrconstruction.com/team/thangavelu.jpeg',
+        'image': 'https://www.kkrconstructiondevelopers.in/team/thangavelu.jpeg',
         'description': '13 years of civil engineering professional expertise managing structural precision and Mivan projects.'
       },
       {
         '@type': 'Person',
         'name': 'Mr. Pradeep',
         'jobTitle': 'Managing Partner - Civil Engineering Professional',
-        'image': 'https://kkrconstruction.com/team/pradeep.jpeg',
+        'image': 'https://www.kkrconstructiondevelopers.in/team/pradeep.jpeg',
         'description': '8 years of experience overseeing site operations, RCC staging, and structural durability.'
       },
       {
         '@type': 'Person',
         'name': 'Mr. Mathavan',
         'jobTitle': 'Civil Engineering Professional',
-        'image': 'https://kkrconstruction.com/team/mathavan.jpeg',
+        'image': 'https://www.kkrconstructiondevelopers.in/team/mathavan.jpeg',
         'description': '5 years of hands-on expertise in structural site execution, quality inspection, and project coordination.'
       },
       {
         '@type': 'Person',
         'name': 'Mr. Karthik',
         'jobTitle': 'Business Executive Management',
-        'image': 'https://kkrconstruction.com/team/karthik.jpeg',
+        'image': 'https://www.kkrconstructiondevelopers.in/team/karthik.jpeg',
         'description': '8 years of experience in client coordination, blueprint estimations, and operational efficiency.'
       }
     ]
@@ -168,8 +168,8 @@ export const SERVICES_PAGE_SCHEMAS = [
   {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': 'https://kkrconstruction.com/services#webpage',
-    'url': 'https://kkrconstruction.com/services',
+    '@id': 'https://www.kkrconstructiondevelopers.in/services#webpage',
+    'url': 'https://www.kkrconstructiondevelopers.in/services',
     'name': 'Construction & Civil Engineering Services - KKR Construction',
     'description': 'Explore end-to-end residential building, commercial complexes, interior civil engineering, and concrete structural works offered by KKR Construction & Developers.',
     'mainEntity': {
@@ -179,25 +179,25 @@ export const SERVICES_PAGE_SCHEMAS = [
           '@type': 'ListItem',
           'position': 1,
           'name': 'Residential Construction',
-          'url': 'https://kkrconstruction.com/services/residential-construction'
+          'url': 'https://www.kkrconstructiondevelopers.in/services/residential-construction'
         },
         {
           '@type': 'ListItem',
           'position': 2,
           'name': 'Commercial Construction',
-          'url': 'https://kkrconstruction.com/services/commercial-construction'
+          'url': 'https://www.kkrconstructiondevelopers.in/services/commercial-construction'
         },
         {
           '@type': 'ListItem',
           'position': 3,
           'name': 'Interior Design & Engineering',
-          'url': 'https://kkrconstruction.com/services/interior-design-engineering'
+          'url': 'https://www.kkrconstructiondevelopers.in/services/interior-design-engineering'
         },
         {
           '@type': 'ListItem',
           'position': 4,
           'name': 'Concrete & Structural Works',
-          'url': 'https://kkrconstruction.com/services/concrete-structural-works'
+          'url': 'https://www.kkrconstructiondevelopers.in/services/concrete-structural-works'
         }
       ]
     }
@@ -211,7 +211,7 @@ export const SERVICE_RESIDENTIAL_SCHEMA = {
   'serviceType': 'Residential Construction',
   'description': 'Custom individual houses, duplex villas, multi-unit apartments, and turnkey homes engineered with IS 456 compliant reinforced concrete and Fe550 steel.',
   'provider': {
-    '@id': 'https://kkrconstruction.com/#organization'
+    '@id': 'https://www.kkrconstructiondevelopers.in/#organization'
   },
   'areaServed': ['Thiruvallur', 'Chennai', 'Avadi', 'Poonamallee', 'Ambattur', 'Sriperumbudur', 'Kanchipuram'],
   'offers': {
@@ -230,7 +230,7 @@ export const SERVICE_COMMERCIAL_SCHEMA = {
   'serviceType': 'Commercial Construction',
   'description': 'Multi-story commercial complexes, institutional facilities, corporate offices, and heavy-security bank vaults/strongrooms built to strict civil engineering codes.',
   'provider': {
-    '@id': 'https://kkrconstruction.com/#organization'
+    '@id': 'https://www.kkrconstructiondevelopers.in/#organization'
   },
   'areaServed': ['Thiruvallur', 'Chennai', 'Sriperumbudur', 'Kanchipuram', 'Tamil Nadu'],
   'offers': {
@@ -249,7 +249,7 @@ export const SERVICE_INTERIOR_SCHEMA = {
   'serviceType': 'Interior Design & Civil Engineering',
   'description': 'Precision laser false ceilings, concealed electrical/plumbing chases, moisture-proof gypsum partitions, and custom architectural woodwork managed by civil engineers.',
   'provider': {
-    '@id': 'https://kkrconstruction.com/#organization'
+    '@id': 'https://www.kkrconstructiondevelopers.in/#organization'
   },
   'areaServed': ['Thiruvallur', 'Chennai', 'Avadi', 'Poonamallee', 'Kanchipuram'],
   'offers': {
@@ -268,7 +268,7 @@ export const SERVICE_CONCRETE_SCHEMA = {
   'serviceType': 'Concrete & Structural Engineering',
   'description': 'High-strength M20, M25, M30 vibration-compacted concrete pouring, Fe550 rebar cages, raft foundation mats, beam shuttering staging, and culvert bridge construction.',
   'provider': {
-    '@id': 'https://kkrconstruction.com/#organization'
+    '@id': 'https://www.kkrconstructiondevelopers.in/#organization'
   },
   'areaServed': ['Thiruvallur', 'Chennai', 'Kanchipuram', 'Chengalpattu', 'Tamil Nadu'],
   'offers': {
@@ -284,15 +284,15 @@ export const MIVAN_PAGE_SCHEMAS = [
   {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    '@id': 'https://kkrconstruction.com/mivan-technology#article',
+    '@id': 'https://www.kkrconstructiondevelopers.in/mivan-technology#article',
     'headline': 'Mivan Aluminum Formwork Construction Technology: Faster, Stronger, Monolithic Concrete',
     'description': 'Comprehensive engineering guide on aluminum formwork technology, achieving 7-10 day floor cycles, seamless monolithic shear walls, zero plastering, and superior seismic resilience.',
-    'image': 'https://kkrconstruction.com/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.png',
+    'image': 'https://www.kkrconstructiondevelopers.in/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.webp',
     'author': {
-      '@id': 'https://kkrconstruction.com/#organization'
+      '@id': 'https://www.kkrconstructiondevelopers.in/#organization'
     },
     'publisher': {
-      '@id': 'https://kkrconstruction.com/#organization'
+      '@id': 'https://www.kkrconstructiondevelopers.in/#organization'
     }
   },
   {
@@ -339,12 +339,12 @@ export const PROJECTS_PAGE_SCHEMAS = [
   {
     '@context': 'https://schema.org',
     '@type': 'ImageGallery',
-    '@id': 'https://kkrconstruction.com/project-gallery#gallery',
+    '@id': 'https://www.kkrconstructiondevelopers.in/project-gallery#gallery',
     'name': 'KKR Construction Project Gallery & Site Execution Portfolio',
     'description': 'High-resolution site execution photographs of Mivan aluminum formwork, raft foundations, residential duplex villas, commercial complexes, and concrete structural works.',
-    'url': 'https://kkrconstruction.com/project-gallery',
+    'url': 'https://www.kkrconstructiondevelopers.in/project-gallery',
     'creator': {
-      '@id': 'https://kkrconstruction.com/#organization'
+      '@id': 'https://www.kkrconstructiondevelopers.in/#organization'
     }
   }
 ];
@@ -353,8 +353,8 @@ export const CONTACT_PAGE_SCHEMAS = [
   {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    '@id': 'https://kkrconstruction.com/contact#webpage',
-    'url': 'https://kkrconstruction.com/contact',
+    '@id': 'https://www.kkrconstructiondevelopers.in/contact#webpage',
+    'url': 'https://www.kkrconstructiondevelopers.in/contact',
     'name': 'Contact KKR Construction & Developers - Office Headquarters Thiruvallur',
     'description': 'Get in touch with KKR Construction & Developers for free project quotations, site inspections, and structural engineering consultations in Thiruvallur and Chennai.',
     'mainEntity': BASE_BUSINESS_SCHEMA

@@ -1,10 +1,29 @@
 # https://www.robotstxt.org/robotstxt.html
+# Robots.txt for KKR Construction & Developers (https://www.kkrconstructiondevelopers.in)
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /*?*fbclid=
+Disallow: /*?*utm_*
 
-# Directives for major search engine crawlers
+# Search Engine Specific Crawlers
 User-agent: Googlebot
 Allow: /
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+Allow: /team/
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.jpeg$
 
 User-agent: Bingbot
 Allow: /
@@ -12,5 +31,11 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# Sitemap index
-Sitemap: https://kkrconstruction.com/sitemap.xml
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.kkrconstructiondevelopers.in/sitemap.xml

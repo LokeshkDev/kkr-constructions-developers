@@ -14,9 +14,10 @@ export interface SEOProps {
   ogImage?: string;
   schemaData?: Record<string, any> | Record<string, any>[];
   breadcrumbs?: BreadcrumbItem[];
+  noIndex?: boolean;
 }
 
-const DOMAIN = 'https://kkrconstruction.com';
+const DOMAIN = 'https://www.kkrconstructiondevelopers.in';
 const DEFAULT_IMAGE = `${DOMAIN}/about-kkr-construction-developers.png`;
 const SITE_NAME = 'KKR Construction & Developers';
 
@@ -28,7 +29,8 @@ export const SEO: React.FC<SEOProps> = ({
   ogType = 'website',
   ogImage = DEFAULT_IMAGE,
   schemaData,
-  breadcrumbs
+  breadcrumbs,
+  noIndex = false
 }) => {
   const fullCanonicalUrl = canonicalUrl.startsWith('http') ? canonicalUrl : `${DOMAIN}${canonicalUrl.startsWith('/') ? '' : '/'}${canonicalUrl}`;
   const fullImageUrl = ogImage.startsWith('http') ? ogImage : `${DOMAIN}${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
@@ -52,7 +54,13 @@ export const SEO: React.FC<SEOProps> = ({
     setMetaTag('name', 'description', description);
     setMetaTag('name', 'keywords', keywords);
     setMetaTag('name', 'author', 'KKR Construction & Developers');
-    setMetaTag('name', 'robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
+    setMetaTag(
+      'name',
+      'robots',
+      noIndex
+        ? 'noindex, follow'
+        : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+    );
 
     // 3. Canonical Link
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;

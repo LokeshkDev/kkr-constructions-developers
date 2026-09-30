@@ -34,7 +34,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, onOpenQu
         canonicalUrl="/project-gallery"
         keywords="KKR Construction Projects, Construction Gallery Thiruvallur, Mivan Site Photos, Residential Project Portfolio, Concrete Works Execution"
         ogType="website"
-        ogImage="/images/mivan/mivan-technology-beam-build-kkr-constructions-and-developers.png"
+        ogImage="/images/mivan/mivan-technology-beam-build-kkr-constructions-and-developers.webp"
         schemaData={[BASE_BUSINESS_SCHEMA, ...PROJECTS_PAGE_SCHEMAS]}
         breadcrumbs={[
           { name: 'Home', url: '/' },

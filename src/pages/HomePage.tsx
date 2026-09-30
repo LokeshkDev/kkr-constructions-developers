@@ -34,42 +34,42 @@ const HOMEPAGE_GALLERY = [
     id: "hg-1",
     title: "Mivan Aluminum Formwork Modular Staging",
     category: "Mivan Technology",
-    imageUrl: "/images/mivan/mivan-technology-beam-build-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-beam-build-kkr-constructions-and-developers.webp",
     description: "Laser-aligned 6061-T6 aluminum panels erected for rapid monolithic wall and deck casting."
   },
   {
     id: "hg-2",
     title: "High-Density RCC Monolithic Pouring",
     category: "Monolithic Casting",
-    imageUrl: "/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.webp",
     description: "M25/M30 high-grade concrete pouring with mechanical needle vibration, eliminating voids and honeycombs."
   },
   {
     id: "hg-3",
     title: "Residential G+3 Building Turnkey Execution",
     category: "Residential Construction",
-    imageUrl: "/images/services/residential-construction-service-detail-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/residential-construction-service-detail-kkr-constrcutions-developer.webp",
     description: "Full-scale structural RCC framework, premium facade elevations, and interior finishings."
   },
   {
     id: "hg-4",
     title: "Commercial Multi-Story Complex",
     category: "Commercial Projects",
-    imageUrl: "/images/services/commercial-construction1-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/commercial-construction1-kkr-constrcutions-developer.webp",
     description: "Multi-floor commercial infrastructure engineered for high footfall, banking, and office compliance."
   },
   {
     id: "hg-5",
     title: "Deck Formwork & High-Yield Steel Binding",
     category: "Structural Works",
-    imageUrl: "/images/mivan/mivan-technology-slab-construction-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-slab-construction-kkr-constructions-and-developers.webp",
     description: "Aluminum deck panels with drop-head supports and Fe550 rebar mesh binding for single-pour floor slabs."
   },
   {
     id: "hg-6",
     title: "Before & After Structural Excellence",
     category: "Mivan Technology",
-    imageUrl: "/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.webp",
     description: "Defect-free monolithic concrete wall finish eliminating traditional brick mortar joint lines and thick plaster."
   }
 ];
@@ -106,7 +106,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuoteModal
         canonicalUrl="/"
         keywords="KKR Construction, KKR Construction Developers, Mivan Construction Thiruvallur, Builders in Thiruvallur, Civil Engineers Chennai, Residential Building Contractors, Commercial Construction Tamil Nadu, Raft Foundation"
         ogType="website"
-        ogImage="/homepage-banner-kkr-construction-developers.png"
+        ogImage="/homepage-banner-kkr-construction-developers.webp"
         schemaData={HOME_PAGE_SCHEMAS}
         breadcrumbs={[
           { name: 'Home', url: '/' }
@@ -168,7 +168,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuoteModal
           >
             <div className="relative rounded-[4px] overflow-hidden shadow-xl border border-gray-200 group bg-white">
               <img 
-                src="/about-kkr-construction-developers.png" 
+                src="/about-kkr-construction-developers.webp" 
                 alt="KKR Construction & Developers Office" 
                 loading="lazy"
                 decoding="async"
@@ -247,7 +247,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuoteModal
             >
               <div className="rounded-[4px] overflow-hidden border border-white/15 shadow-2xl relative group">
                 <img 
-                  src="/homepage-banner-kkr-construction-developers.png" 
+                  src="/homepage-banner-kkr-construction-developers.webp" 
                   alt="Mivan Shuttering Site" 
                   loading="lazy"
                   decoding="async"

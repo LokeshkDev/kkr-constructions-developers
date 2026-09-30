@@ -242,91 +242,91 @@ export const PROJECTS_DATA: ProjectItem[] = [
     id: "p1",
     title: "Mivan Aluminum Formwork Modular Staging",
     category: "Mivan Construction",
-    imageUrl: "/images/mivan/mivan-technology-beam-build-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-beam-build-kkr-constructions-and-developers.webp",
     description: "Laser-aligned 6061-T6 aluminum modular panels erected for rapid monolithic wall and deck casting."
   },
   {
     id: "p2",
     title: "High-Density Monolithic Concrete Pour",
     category: "Mivan Construction",
-    imageUrl: "/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-beam-concreate-kkr-constructions-and-developers.webp",
     description: "Continuous pour of M25/M30 grade concrete with mechanical needle compaction eliminating voids and honeycombs."
   },
   {
     id: "p3",
     title: "Heavy Rebar Grilling & Steel Binding",
     category: "Structural Works",
-    imageUrl: "/images/mivan/mivan-technology-grilling-beam-construction-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-grilling-beam-construction-kkr-constructions-and-developers.webp",
     description: "Certified Fe550 TMT rebar binding with precise cover blocks and integrated conduit piping."
   },
   {
     id: "p4",
     title: "Monolithic Deck & Floor Slab Staging",
     category: "Mivan Construction",
-    imageUrl: "/images/mivan/mivan-technology-slab-construction-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-slab-construction-kkr-constructions-and-developers.webp",
     description: "Aluminum deck panels laid with prop-head support systems for single-pour floor slabs."
   },
   {
     id: "p5",
     title: "Integrated Column & Pillar Vertical Alignment",
     category: "Structural Works",
-    imageUrl: "/images/mivan/mivan-technology-beam-pillar-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-beam-pillar-kkr-constructions-and-developers.webp",
     description: "Laser-aligned vertical column shuttering reinforced with heavy-duty tie rods and wallers."
   },
   {
     id: "p6",
     title: "Joint Sealing & Damp-Proof Barrier",
     category: "Finishing Works",
-    imageUrl: "/images/mivan/mivan-technology-sealing-construction-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-sealing-construction-kkr-constructions-and-developers.webp",
     description: "De-shuttered concrete revealing ultra-smooth, moisture-impermeable monolithic shell with zero joints."
   },
   {
     id: "p7",
     title: "Before & After Structural Monolith Finish",
     category: "Mivan Construction",
-    imageUrl: "/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.png",
+    imageUrl: "/images/mivan/mivan-technology-before-after-kkr-constructions-and-developers.webp",
     description: "Mirror-smooth monolithic concrete walls compared against conventional brickwork, requiring zero plastering."
   },
   {
     id: "p8",
     title: "Residential G+3 Building Turnkey Execution",
     category: "Residential",
-    imageUrl: "/images/services/residential-construction-service-detail-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/residential-construction-service-detail-kkr-constrcutions-developer.webp",
     description: "Full turnkey residential construction with structural RCC framework and custom architectural finishes."
   },
   {
     id: "p9",
     title: "Duplex Villa Architectural Concrete Frame",
     category: "Residential",
-    imageUrl: "/images/services/residential-construction-service1-detail-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/residential-construction-service1-detail-kkr-constrcutions-developer.webp",
     description: "High-spec residential villa construction with engineered spans and cantilevered balcony slabs."
   },
   {
     id: "p10",
     title: "Modern Multi-Story Residential Elevation",
     category: "Residential",
-    imageUrl: "/images/services/residential-construction-service2-detail-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/residential-construction-service2-detail-kkr-constrcutions-developer.webp",
     description: "Contemporary residential facade execution with durable weather-proof finishes and balcony glass railings."
   },
   {
     id: "p11",
     title: "Commercial Multi-Story Complex",
     category: "Commercial Projects",
-    imageUrl: "/images/services/commercial-construction1-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/commercial-construction1-kkr-constrcutions-developer.webp",
     description: "Multi-floor commercial infrastructure engineered for high footfall, retail spaces, and heavy floor loading."
   },
   {
     id: "p12",
     title: "Commercial Plaza Structural Framework",
     category: "Commercial Projects",
-    imageUrl: "/images/services/commercial-construction2-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/commercial-construction2-kkr-constrcutions-developer.webp",
     description: "Heavy structural column grids and clear-span floor plates for flexible commercial leasing."
   },
   {
     id: "p13",
     title: "Commercial Office & Institutional Fit-Out",
     category: "Commercial Projects",
-    imageUrl: "/images/services/commercial-construction3-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/commercial-construction3-kkr-constrcutions-developer.webp",
     description: "High-utility commercial space execution with complete electrical, fire safety, and plumbing shafts."
   },
   {

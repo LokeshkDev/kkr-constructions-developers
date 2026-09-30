@@ -61,19 +61,19 @@ export const SERVICE_DETAILS_DATA: Record<string, ServiceDetailFull> = {
     fullOverview: "KKR Construction & Developers provides end-to-end residential construction managed directly by qualified civil engineering professionals. From initial architectural layout, vastu planning, and soil bearing tests to RCC frame casting, high-grade masonry, and modern elevation finishing, we ensure every home is built with non-negotiable structural integrity.",
     images: [
       {
-        url: "/images/services/residential-construction-service-detail-kkr-constrcutions-developer.png",
+        url: "/images/services/residential-construction-service-detail-kkr-constrcutions-developer.webp",
         caption: "Completed Modern Residential Elevation with Architectural Facade"
       },
       {
-        url: "/images/services/residential-construction-service1-detail-kkr-constrcutions-developer.png",
+        url: "/images/services/residential-construction-service1-detail-kkr-constrcutions-developer.webp",
         caption: "Live Residential Site Execution - Exterior Plastering & Staging"
       },
       {
-        url: "/images/services/residential-construction-service2-detail-kkr-constrcutions-developer.png",
+        url: "/images/services/residential-construction-service2-detail-kkr-constrcutions-developer.webp",
         caption: "Reinforced Plinth & Slab Staging for Residential Development"
       },
       {
-        url: "/images/services/residential-construction-service3-detail-kkr-constrcutions-developer.png",
+        url: "/images/services/residential-construction-service3-detail-kkr-constrcutions-developer.webp",
         caption: "Smooth Ceiling Slab Casting & Concealed Electrical Conduits"
       }
     ],
@@ -133,19 +133,19 @@ export const SERVICE_DETAILS_DATA: Record<string, ServiceDetailFull> = {
     fullOverview: "Commercial projects require advanced structural calculations to handle heavy occupancy loads, high vibration machinery, and specialized security structures (such as reinforced RCC bank lockers and strongrooms). Led by Mr. Thangavel (13 yrs experience) and our civil engineering team, we deliver commercial facilities built for multi-decade durability.",
     images: [
       {
-        url: "/images/services/commercial-construction1-kkr-constrcutions-developer.png",
+        url: "/images/services/commercial-construction1-kkr-constrcutions-developer.webp",
         caption: "Commercial Complex Multi-Tier Framework & Heavy Scaffolding"
       },
       {
-        url: "/images/services/commercial-construction2-kkr-constrcutions-developer.png",
+        url: "/images/services/commercial-construction2-kkr-constrcutions-developer.webp",
         caption: "Heavy Column Footing Rebar Cage Assembly for Commercial Hub"
       },
       {
-        url: "/images/services/commercial-construction3-kkr-constrcutions-developer.png",
+        url: "/images/services/commercial-construction3-kkr-constrcutions-developer.webp",
         caption: "Commercial Structural Staging & Slab Casting Execution"
       },
       {
-        url: "/images/services/service-of-kkr-constrcutions-developer.png",
+        url: "/images/services/service-of-kkr-constrcutions-developer.webp",
         caption: "Structural Concrete Engineering & Multi-Story Commercial Execution"
       }
     ],
@@ -204,11 +204,11 @@ export const SERVICE_DETAILS_DATA: Record<string, ServiceDetailFull> = {
     fullOverview: "Interior works executed by KKR Construction are grounded in structural civil engineering. Unlike decorative-only decorators, our engineers ensure that false ceilings, partition layouts, plumbing chases, and custom cantilever window seatings are engineered without weakening structural integrity or causing water seepage.",
     images: [
       {
-        url: "/images/whychoose/client-centric-approach-kkr-construction-developer.png",
+        url: "/images/whychoose/client-centric-approach-kkr-construction-developer.webp",
         caption: "Precision Ceiling Slab Casting with Concealed Electrical Conduits"
       },
       {
-        url: "/images/whychoose/timely-completion-kkr-construction-developer.png",
+        url: "/images/whychoose/timely-completion-kkr-construction-developer.webp",
         caption: "Custom Window Seating & Contemporary Facade Integration"
       }
     ],
@@ -267,19 +267,19 @@ export const SERVICE_DETAILS_DATA: Record<string, ServiceDetailFull> = {
     fullOverview: "Structural concrete is the core civil specialty of KKR Construction & Developers. Managed by our veteran engineers, we execute heavy raft bottom mats, high-tolerance beam shuttering, and high-speed Mivan aluminum formwork (7–10 days per floor) to deliver impenetrable structural strength for residential and commercial structures.",
     images: [
       {
-        url: "/images/services/service-of-kkr-constrcutions-developer.png",
+        url: "/images/services/service-of-kkr-constrcutions-developer.webp",
         caption: "Heavy Column Footing Rebar Cage Assembly & Concrete Foundation Base"
       },
       {
-        url: "/homepage-banner-kkr-construction-developers.png",
+        url: "/homepage-banner-kkr-construction-developers.webp",
         caption: "Monolithic Mivan Aluminum Formwork Staging for High-Speed Pouring"
       },
       {
-        url: "/images/whychoose/quality-construction-kkr-construction-developer.png",
+        url: "/images/whychoose/quality-construction-kkr-construction-developer.webp",
         caption: "Heavy Raft Foundation Bottom Mat Steel Reinforcement Assembly"
       },
       {
-        url: "/images/whychoose/technical-expertise-kkr-construction-developer.png",
+        url: "/images/whychoose/technical-expertise-kkr-construction-developer.webp",
         caption: "Civil Engineering Team Inspecting Multi-Tier Rebar Framework"
       }
     ],
@@ -394,7 +394,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ serviceId,
         canonicalUrl={getCanonicalForService()}
         keywords={`${service.title}, KKR Construction, Civil Engineering ${service.category}, Builders Thiruvallur, Chennai Construction Contractors`}
         ogType="article"
-        ogImage={service.images[0]?.url || '/images/services/residential-construction-service-detail-kkr-constrcutions-developer.png'}
+        ogImage={service.images[0]?.url || '/images/services/residential-construction-service-detail-kkr-constrcutions-developer.webp'}
         schemaData={getSchemaForService()}
         breadcrumbs={[
           { name: 'Home', url: '/' },

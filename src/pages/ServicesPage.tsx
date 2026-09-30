@@ -35,7 +35,7 @@ const detailedServices: ServiceDetailData[] = [
     id: "residential",
     title: "Residential Construction",
     category: "Building & Living",
-    imageUrl: "/images/services/residential-construction-service-detail-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/residential-construction-service-detail-kkr-constrcutions-developer.webp",
     shortDesc: "Individual houses, duplex villas, and modern residential developments engineered for structural longevity, aesthetic appeal, and living comfort.",
     fullOverview: "KKR Construction & Developers delivers custom residential building solutions managed directly by experienced civil engineers. From initial architectural layout and soil bearing tests to structural RCC framing, masonry, electrical plumbing conduits, and modern facade finishes, every step adheres to strict building codes and client vision.",
     specifications: [
@@ -63,7 +63,7 @@ const detailedServices: ServiceDetailData[] = [
     id: "commercial",
     title: "Commercial Construction",
     category: "Enterprise & Infrastructure",
-    imageUrl: "/images/services/commercial-construction1-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/commercial-construction1-kkr-constrcutions-developer.webp",
     shortDesc: "Commercial office spaces, retail complexes, banking infrastructure, and industrial developments built with robust load capacity and modern utility integration.",
     fullOverview: "We engineer high-durability commercial structures capable of handling high occupancy loads, heavy mechanical staging, and specialized security needs (such as reinforced RCC bank lockers and strongrooms). All works are led by our managing partners with up to 13 years of civil engineering execution experience.",
     specifications: [
@@ -91,7 +91,7 @@ const detailedServices: ServiceDetailData[] = [
     id: "interior",
     title: "Interior Design & Engineering",
     category: "Space Optimization",
-    imageUrl: "/images/whychoose/client-centric-approach-kkr-construction-developer.png",
+    imageUrl: "/images/whychoose/client-centric-approach-kkr-construction-developer.webp",
     shortDesc: "Comprehensive interior spatial planning, electrical conduit integration, custom false ceilings, and premium finishing managed with engineering precision.",
     fullOverview: "Interior spaces executed by KKR Construction bridge the gap between aesthetic beauty and structural durability. Unlike purely decorative approaches, our civil engineers ensure that false ceilings, partition walls, electrical conduits, and custom window seatings integrate seamlessly without compromising structural load or surface water resistance.",
     specifications: [
@@ -119,7 +119,7 @@ const detailedServices: ServiceDetailData[] = [
     id: "concrete",
     title: "Concrete & Structural Works",
     category: "Core Engineering",
-    imageUrl: "/images/services/service-of-kkr-constrcutions-developer.png",
+    imageUrl: "/images/services/service-of-kkr-constrcutions-developer.webp",
     shortDesc: "Precision concrete foundations, raft bottom mats, first-floor beam shuttering, high-speed Mivan aluminum formwork, and RCC compound walls.",
     fullOverview: "The core foundation of KKR Construction & Developers lies in specialized civil structural works. From complex raft bottom mat rebar binding and multi-column footings to high-speed Mivan aluminum formwork (7–10 days per floor) and culvert bridge infrastructure, we maintain rigorous engineering quality on all structural pours.",
     specifications: [
@@ -154,7 +154,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
         canonicalUrl="/services"
         keywords="Construction Services Thiruvallur, Residential Builders Chennai, Commercial Construction Tamil Nadu, Interior Design Civil Engineers, Concrete Works Contractors, RCC Raft Foundation"
         ogType="website"
-        ogImage="/images/services/residential-construction-service-detail-kkr-constrcutions-developer.png"
+        ogImage="/images/services/residential-construction-service-detail-kkr-constrcutions-developer.webp"
         schemaData={SERVICES_PAGE_SCHEMAS}
         breadcrumbs={[
           { name: 'Home', url: '/' },

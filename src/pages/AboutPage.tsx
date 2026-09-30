@@ -33,7 +33,7 @@ const whyChooseCardsData = [
     title: "Quality Construction",
     description: "Uncompromising focus on material standards, concrete mix density, and structural integrity across every build phase.",
     feature: "Raft Foundation & RCC Grade Testing",
-    imageUrl: "/images/whychoose/quality-construction-kkr-construction-developer.png",
+    imageUrl: "/images/whychoose/quality-construction-kkr-construction-developer.webp",
     icon: <ShieldCheck className="w-5 h-5" />,
     color: "green"
   },
@@ -43,7 +43,7 @@ const whyChooseCardsData = [
     title: "Technical Expertise",
     description: "Led by civil engineering professionals with up to 13 years of specialized experience in structural and Mivan technology.",
     feature: "13+ & 8+ Years Civil Engineering Experience",
-    imageUrl: "/images/whychoose/technical-expertise-kkr-construction-developer.png",
+    imageUrl: "/images/whychoose/technical-expertise-kkr-construction-developer.webp",
     icon: <HardHat className="w-5 h-5" />,
     color: "gold"
   },
@@ -53,7 +53,7 @@ const whyChooseCardsData = [
     title: "Client-Centric Approach",
     description: "Transparent communications, regular progress updates, and personalized solutions tailored to individual project visions.",
     feature: "Direct Partner Communication & Updates",
-    imageUrl: "/images/whychoose/client-centric-approach-kkr-construction-developer.png",
+    imageUrl: "/images/whychoose/client-centric-approach-kkr-construction-developer.webp",
     icon: <Users className="w-5 h-5" />,
     color: "green"
   },
@@ -63,7 +63,7 @@ const whyChooseCardsData = [
     title: "Professional Execution",
     description: "Methodical site management, strict adherence to engineering drawings, and disciplined safety standards.",
     feature: "100% Engineering Drawing Fidelity",
-    imageUrl: "/images/whychoose/professional-execution-kkr-construction-developer.png",
+    imageUrl: "/images/whychoose/professional-execution-kkr-construction-developer.webp",
     icon: <CheckCircle2 className="w-5 h-5" />,
     color: "gold"
   },
@@ -73,7 +73,7 @@ const whyChooseCardsData = [
     title: "Timely Completion",
     description: "Optimized construction cycles—utilizing advanced Mivan formwork systems to achieve rapid project turnaround.",
     feature: "7–10 Days Per Floor Cycle Time",
-    imageUrl: "/images/whychoose/timely-completion-kkr-construction-developer.png",
+    imageUrl: "/images/whychoose/timely-completion-kkr-construction-developer.webp",
     icon: <Clock className="w-5 h-5" />,
     color: "green"
   },
@@ -83,7 +83,7 @@ const whyChooseCardsData = [
     title: "Long-Term Value",
     description: "Durable, low-maintenance structures engineered to retain visual appeal and high asset value over decades.",
     feature: "High Resale & Structural Longevity",
-    imageUrl: "/images/whychoose/long-term-value-kkr-construction-developer.png",
+    imageUrl: "/images/whychoose/long-term-value-kkr-construction-developer.webp",
     icon: <TrendingUp className="w-5 h-5" />,
     color: "gold"
   }
@@ -110,7 +110,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuoteMod
         canonicalUrl="/about"
         keywords="About KKR Construction, Civil Engineering Leadership, Thiruvallur Builders, Mohan Ram Construction, Thangavel Civil Engineer, Mivan Engineering Experts, Structural Contractors Tamil Nadu"
         ogType="article"
-        ogImage="/about-banner-kkr-constrcutions-developer.png"
+        ogImage="/about-banner-kkr-constrcutions-developer.webp"
         schemaData={ABOUT_PAGE_SCHEMAS}
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -124,7 +124,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuoteMod
         {/* Background Image - 100% Pure Image without Color Overlay */}
         <div className="absolute inset-0 overflow-hidden">
           <img 
-            src="/about-banner-kkr-constrcutions-developer.png" 
+            src="/about-banner-kkr-constrcutions-developer.webp" 
             alt="KKR Construction Project Site Execution"
             loading="eager"
             decoding="async"
@@ -220,7 +220,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuoteMod
           >
             <div className="relative rounded-[4px] overflow-hidden shadow-2xl border border-gray-200 group bg-white">
               <img 
-                src="/about-kkr-construction-developers.png" 
+                src="/about-kkr-construction-developers.webp" 
                 alt="KKR Construction & Developers Office" 
                 loading="lazy"
                 decoding="async"

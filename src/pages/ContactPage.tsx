@@ -67,7 +67,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
         canonicalUrl="/contact"
         keywords="Contact KKR Construction, Construction Company Phone Number Thiruvallur, Civil Engineers Contact Chennai, Construction Site Inspection Tamil Nadu"
         ogType="website"
-        ogImage="/about-banner-kkr-constrcutions-developer.png"
+        ogImage="/about-banner-kkr-constrcutions-developer.webp"
         schemaData={CONTACT_PAGE_SCHEMAS}
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -81,7 +81,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
         {/* Background Image - 100% Original without Color Overlay */}
         <div className="absolute inset-0 overflow-hidden">
           <img 
-            src="/about-banner-kkr-constrcutions-developer.png" 
+            src="/about-banner-kkr-constrcutions-developer.webp" 
             alt="KKR Construction & Developers Contact"
             loading="eager"
             decoding="async"

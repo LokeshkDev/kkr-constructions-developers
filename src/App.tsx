@@ -12,6 +12,7 @@ const ServiceDetailPage = lazy(() => import('./pages/ServiceDetailPage').then(m 
 const MivanPage = lazy(() => import('./pages/MivanPage').then(m => ({ default: m.MivanPage })));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage').then(m => ({ default: m.ProjectsPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 const QuoteModal = lazy(() => import('./components/QuoteModal').then(m => ({ default: m.QuoteModal })));
 
 const PageSkeletonFallback = () => (
@@ -46,6 +47,8 @@ export const getPageUrl = (page: string): string => {
       return '/project-gallery';
     case 'contact':
       return '/contact';
+    case 'not-found':
+      return '/404';
     default:
       if (page.startsWith('service-')) {
         return `/services/${page.replace('service-', '')}`;
@@ -80,6 +83,7 @@ export const parsePathToPage = (path: string, hash: string): string => {
   if (normalizedPath === '/mivan-technology' || normalizedPath === '/mivan' || normalizedPath === '/mivan-tech') return 'mivan';
   if (normalizedPath === '/project-gallery' || normalizedPath === '/project-showcase' || normalizedPath === '/projects' || normalizedPath === '/portfolio') return 'projects';
   if (normalizedPath === '/contact' || normalizedPath === '/contact-us') return 'contact';
+  if (normalizedPath === '/404') return 'not-found';
 
   // 2. Fallback to hash if present (for legacy deep links)
   if (hash) {
@@ -92,7 +96,8 @@ export const parsePathToPage = (path: string, hash: string): string => {
     }
   }
 
-  return 'home';
+  // 3. Fallback to 404 Not Found for unrecognized URLs
+  return 'not-found';
 };
 
 export function App() {
@@ -180,6 +185,7 @@ export function App() {
           {currentPage === 'mivan' && <MivanPage onNavigate={handleNavigate} onOpenQuoteModal={handleOpenQuoteModal} />}
           {currentPage === 'projects' && <ProjectsPage onNavigate={handleNavigate} onOpenQuoteModal={handleOpenQuoteModal} />}
           {currentPage === 'contact' && <ContactPage onNavigate={handleNavigate} onOpenQuoteModal={handleOpenQuoteModal} />}
+          {currentPage === 'not-found' && <NotFoundPage onNavigate={handleNavigate} onOpenQuoteModal={handleOpenQuoteModal} />}
         </Suspense>
       </main>
 
