@@ -418,13 +418,13 @@ export async function sendEnquiryEmails(data: EnquiryData): Promise<{
   error?: string;
 }> {
   const smtpUser = process.env.SMTP_USER || 'kkrconstructiondevelopers@gmail.com';
-  const rawPass = process.env.SMTP_PASS || '';
+  const rawPass = process.env.SMTP_PASS || 'xsccgviewvurcbfu';
   const smtpPass = rawPass.replace(/\s+/g, ''); // Strip any accidental spaces from 16-char app password
-  const adminEmail = process.env.ADMIN_EMAIL || smtpUser;
+  const adminEmail = process.env.ADMIN_EMAIL || 'kkrconstructiondevelopers@gmail.com, lokeshk2492@gmail.com';
   const companyName = process.env.COMPANY_NAME || 'KKR Construction & Developers';
 
-  if (!smtpPass || smtpPass === 'your_16_character_app_password_here') {
-    const errorMsg = 'SMTP_PASS is not configured in Vercel Environment Variables. Please set SMTP_PASS in Vercel Project Settings > Environment Variables.';
+  if (!smtpPass) {
+    const errorMsg = 'SMTP_PASS is not configured. Please set your 16-character Google App Password.';
     console.error(`[EmailService Error]: ${errorMsg}`);
     return {
       success: false,
