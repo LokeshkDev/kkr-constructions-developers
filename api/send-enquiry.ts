@@ -513,10 +513,23 @@ export async function sendEnquiryEmails(data: EnquiryData): Promise<{
   };
 }
 
+export interface ApiRequest {
+  method?: string;
+  body?: any;
+  headers?: Record<string, string | string[] | undefined>;
+}
+
+export interface ApiResponse {
+  status: (statusCode: number) => ApiResponse;
+  json: (data: any) => void;
+  setHeader: (name: string, value: string) => void;
+  end: () => void;
+}
+
 /**
  * Standard Vercel Serverless Function & Node Handler
  */
-export default async function handler(req: any, res: any) {
+export default async function handler(req: ApiRequest, res: ApiResponse) {
   // CORS Headers
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
