@@ -66,7 +66,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
         <div className="absolute inset-0 overflow-hidden">
           <img 
             src="/homepage-banner-kkr-construction-developers.webp" 
-            alt="KKR Construction Mivan Formwork Site"
+            srcSet="/homepage-banner-640.webp 640w, /homepage-banner-1080.webp 1080w, /homepage-banner-kkr-construction-developers.webp 1920w"
+            sizes="100vw"
+            alt="KKR Construction Mivan Formwork Site Execution"
             loading="eager"
             // @ts-ignore
             fetchpriority="high"

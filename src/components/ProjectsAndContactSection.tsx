@@ -303,10 +303,13 @@ export const ProjectsAndContactSection: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-gray-300 mb-1">Your Full Name *</label>
+                      <label htmlFor="contact-section-name" className="block text-xs font-semibold text-gray-200 mb-1">Your Full Name *</label>
                       <input 
+                        id="contact-section-name"
+                        name="name"
                         type="text"
                         required
+                        autoComplete="name"
                         value={formData.name}
                         onChange={e => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Anand Kumar"
@@ -314,10 +317,13 @@ export const ProjectsAndContactSection: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-gray-300 mb-1">Phone Number *</label>
+                      <label htmlFor="contact-section-phone" className="block text-xs font-semibold text-gray-200 mb-1">Phone Number *</label>
                       <input 
+                        id="contact-section-phone"
+                        name="phone"
                         type="tel"
                         required
+                        autoComplete="tel"
                         value={formData.phone}
                         onChange={e => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+91 98765 43210"
@@ -328,9 +334,12 @@ export const ProjectsAndContactSection: React.FC = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-gray-300 mb-1">Email Address</label>
+                      <label htmlFor="contact-section-email" className="block text-xs font-semibold text-gray-200 mb-1">Email Address</label>
                       <input 
+                        id="contact-section-email"
+                        name="email"
                         type="email"
+                        autoComplete="email"
                         value={formData.email}
                         onChange={e => setFormData({ ...formData, email: e.target.value })}
                         placeholder="name@domain.com"
@@ -338,8 +347,10 @@ export const ProjectsAndContactSection: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-gray-300 mb-1">Project Category</label>
+                      <label htmlFor="contact-section-service" className="block text-xs font-semibold text-gray-200 mb-1">Project Category</label>
                       <select
+                        id="contact-section-service"
+                        name="projectType"
                         value={formData.projectType}
                         onChange={e => setFormData({ ...formData, projectType: e.target.value })}
                         className="w-full px-4 py-3 rounded-[4px] bg-brand-darkSlate border border-white/20 text-white text-xs focus:outline-none focus:border-brand-green"
@@ -354,8 +365,10 @@ export const ProjectsAndContactSection: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-gray-300 mb-1">Project Message / Requirements</label>
+                    <label htmlFor="contact-section-message" className="block text-xs font-semibold text-gray-200 mb-1">Project Message / Requirements</label>
                     <textarea 
+                      id="contact-section-message"
+                      name="message"
                       rows={4}
                       value={formData.message}
                       onChange={e => setFormData({ ...formData, message: e.target.value })}

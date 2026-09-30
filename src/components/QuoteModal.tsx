@@ -173,12 +173,15 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 {/* Name & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="quote-name" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Full Name *
                     </label>
                     <input 
+                      id="quote-name"
+                      name="name"
                       type="text" 
                       required
+                      autoComplete="name"
                       placeholder="e.g. S. Karthik"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -187,12 +190,15 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="quote-phone" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Phone Number *
                     </label>
                     <input 
+                      id="quote-phone"
+                      name="phone"
                       type="tel" 
                       required
+                      autoComplete="tel"
                       placeholder="+91 99401 76461"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -204,11 +210,14 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 {/* Email & Service */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="quote-email" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Email Address (Optional)
                     </label>
                     <input 
+                      id="quote-email"
+                      name="email"
                       type="email" 
+                      autoComplete="email"
                       placeholder="e.g. karthik@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -217,10 +226,12 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="quote-service" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Project Service / Scope *
                     </label>
                     <select 
+                      id="quote-service"
+                      name="serviceType"
                       value={formData.serviceType}
                       onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-[4px] bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-green focus:bg-white text-xs sm:text-sm transition-colors"
@@ -238,10 +249,12 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 {/* Area & Location */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="quote-area" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Approx Built-up / Plot Area
                     </label>
                     <input 
+                      id="quote-area"
+                      name="area"
                       type="text" 
                       placeholder="e.g. 3,500 sq.ft or 2,400 sq.ft plot"
                       value={formData.area}
@@ -251,10 +264,12 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="quote-location" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Site Location / District in Tamil Nadu *
                     </label>
                     <input 
+                      id="quote-location"
+                      name="location"
                       type="text" 
                       required
                       placeholder="e.g. Thiruvallur, Avadi, Anna Nagar, Sriperumbudur..."
@@ -269,11 +284,13 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 {isInspection && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-3.5 rounded-[4px] bg-brand-lightGreen/50 border border-brand-green/20">
                     <div className="space-y-1">
-                      <label className="text-xs font-bold uppercase tracking-wider text-brand-charcoal flex items-center gap-1.5">
+                      <label htmlFor="quote-date" className="text-xs font-bold uppercase tracking-wider text-brand-charcoal flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5 text-brand-green" />
                         <span>Preferred Visit Date</span>
                       </label>
                       <input 
+                        id="quote-date"
+                        name="preferredDate"
                         type="date" 
                         value={formData.preferredDate}
                         onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
@@ -282,11 +299,13 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-xs font-bold uppercase tracking-wider text-brand-charcoal flex items-center gap-1.5">
+                      <label htmlFor="quote-slot" className="text-xs font-bold uppercase tracking-wider text-brand-charcoal flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5 text-brand-gold" />
                         <span>Preferred Time Slot</span>
                       </label>
                       <select 
+                        id="quote-slot"
+                        name="preferredSlot"
                         value={formData.preferredSlot}
                         onChange={(e) => setFormData({ ...formData, preferredSlot: e.target.value })}
                         className="w-full px-3 py-2 rounded-[4px] bg-white border border-gray-200 focus:outline-none focus:border-brand-green text-xs sm:text-sm"
@@ -301,10 +320,12 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
 
                 {/* Message / Specific Requirements */}
                 <div className="space-y-1">
-                  <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                  <label htmlFor="quote-message" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                     {isInspection ? 'Site Details & Specific Inspection Notes' : 'Specific Requirements / Plan Status'}
                   </label>
                   <textarea 
+                    id="quote-message"
+                    name="message"
                     rows={2}
                     placeholder={isInspection 
                       ? 'e.g. Looking for soil bearing test, G+3 structural feasibility, landmark near Thiruvallur bus stand...'

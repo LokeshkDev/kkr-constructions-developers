@@ -82,9 +82,15 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
         <div className="absolute inset-0 overflow-hidden">
           <img 
             src="/about-banner-kkr-constrcutions-developer.webp" 
+            srcSet="/about-banner-640.webp 640w, /about-banner-kkr-constrcutions-developer.webp 1920w"
+            sizes="100vw"
             alt="KKR Construction & Developers Contact"
             loading="eager"
+            // @ts-ignore
+            fetchpriority="high"
             decoding="async"
+            width="1920"
+            height="320"
             className="w-full h-full object-cover object-center"
           />
         </div>
@@ -344,12 +350,15 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="contact-name" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Your Full Name *
                     </label>
                     <input 
+                      id="contact-name"
+                      name="name"
                       type="text" 
                       required
+                      autoComplete="name"
                       placeholder="e.g. K. Rajesh Kumar"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -359,12 +368,15 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                   {/* Phone */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="contact-phone" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Phone Number *
                     </label>
                     <input 
+                      id="contact-phone"
+                      name="phone"
                       type="tel" 
                       required
+                      autoComplete="tel"
                       placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -376,11 +388,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Email */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="contact-email" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Email Address
                     </label>
                     <input 
+                      id="contact-email"
+                      name="email"
                       type="email" 
+                      autoComplete="email"
                       placeholder="yourname@gmail.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -390,10 +405,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                   {/* Service Type */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <label htmlFor="contact-service" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                       Project Interest *
                     </label>
                     <select 
+                      id="contact-service"
+                      name="serviceType"
                       value={formData.serviceType}
                       onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                       className="w-full px-4 py-3 rounded-[4px] bg-white border border-gray-300 focus:outline-none focus:border-brand-green text-sm transition-colors shadow-xs"
@@ -410,10 +427,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                 {/* Message */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-gray-700">
+                  <label htmlFor="contact-message" className="text-xs font-bold uppercase tracking-wider text-gray-700">
                     Project Location / Details / Requirements
                   </label>
                   <textarea 
+                    id="contact-message"
+                    name="message"
                     rows={4}
                     placeholder="Please share plot size, built-up area (sq.ft), floor count, location in Tamil Nadu, or specific structural requirements..."
                     value={formData.message}

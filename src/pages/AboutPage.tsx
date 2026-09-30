@@ -125,9 +125,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuoteMod
         <div className="absolute inset-0 overflow-hidden">
           <img 
             src="/about-banner-kkr-constrcutions-developer.webp" 
+            srcSet="/about-banner-640.webp 640w, /about-banner-kkr-constrcutions-developer.webp 1920w"
+            sizes="100vw"
             alt="KKR Construction Project Site Execution"
             loading="eager"
+            // @ts-ignore
+            fetchpriority="high"
             decoding="async"
+            width="1920"
+            height="320"
             className="w-full h-full object-cover object-center"
           />
         </div>

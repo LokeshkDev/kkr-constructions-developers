@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback, lazy, Suspense } from 'react';
-import { PageLoader } from './components/PageLoader';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { FloatingSupport } from './components/FloatingSupport';
@@ -144,9 +143,6 @@ export function App() {
 
   return (
     <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-brand-offWhite font-sans text-brand-charcoal selection:bg-brand-green selection:text-white flex flex-col relative">
-      {/* Light Construction Page Loader Overlay */}
-      <PageLoader />
-
       {/* Unified Free Quotation & Site Inspection Popup Modal (Loaded on demand) */}
       {quoteModalOpen && (
         <Suspense fallback={null}>

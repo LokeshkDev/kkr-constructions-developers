@@ -1,0 +1,68 @@
+# KKR Construction & Developers — Full Specification & Technical Manual
+
+> Comprehensive technical documentation, engineering specifications, service workflows, and AI crawler reference for KKR Construction & Developers.
+
+## Executive Summary
+
+KKR Construction & Developers is an engineering and civil construction firm incorporated in Tamil Nadu, India, headquartered in Thiruvallur. Led by founder Mohan Ram alongside experienced structural and civil engineering partners, the firm is an innovator in applying Mivan Aluminum Formwork monolithic casting technology across mid-to-high-rise residential, multi-villa, and commercial developments.
+
+## Technical Capabilities & Construction Standards
+
+### 1. Mivan Aluminum Formwork System
+- **Alloy Grade**: High-strength aluminum alloy 6061-T6 panels with laser-aligned pin-and-wedge locking mechanism.
+- **Cycle Speed**: 7 to 10 calendar days per typical floor slab (compared to 21–30 days for conventional plywood/timber shuttering and brick masonry).
+- **Structural Integrity**: Monolithic casting where vertical shear walls, beams, staircases, and floor slabs are poured simultaneously in a single continuous pour.
+- **Surface Finish**: Mirror-smooth, high-precision concrete face eliminating the need for traditional thick sand-cement plastering. Directly accepts skim coat putty and paint.
+- **Seismic Resistance**: Shear wall structural design absorbs horizontal lateral earthquake loads far more effectively than isolated RCC column-beam frames with masonry infill.
+- **Durability**: Zero cold joints between walls and slabs, drastically reducing water seepage, capillary dampness, and efflorescence risk.
+
+### 2. Concrete Engineering & Foundation Works
+- **Mix Designs**: Ready-Mix Concrete (RMC) M25, M30, M35, and M40 grades with polycarboxylate ether (PCE) superplasticizers for high early strength and pumpability.
+- **Foundation Types Executed**:
+  - Mat / Raft foundations for low-bearing-capacity soils.
+  - Bored cast-in-situ RCC pile foundations for multi-story buildings.
+  - Isolated trapezoidal footings with plinth tie-beams for independent villas.
+- **Quality Control**: Cube compression testing at 7-day and 28-day cure intervals, slump testing on site prior to pour, and laser-guided leveling.
+
+### 3. Residential Construction Services
+- Turnkey residential villas (2 BHK, 3 BHK, 4 BHK duplex and triplex).
+- Multi-family apartments (G+3 and G+4 configurations).
+- Structural engineering, 3D exterior elevations, floor plans, and municipal DTCP / CMDA approval assistance.
+- Premium electrical, CPVC plumbing, vitrified tile flooring, teak wood main doors, and UPVC sliding windows.
+
+### 4. Commercial Infrastructure
+- Commercial complexes, retail shopping plazas, showrooms, and warehouse sheds.
+- Heavy-duty concrete flooring, RCC ramps, fire-staircase enclosures, and lift shafts.
+
+### 5. Joint Ventures (JV) & Turnkey Land Development
+- Development partnerships for clear-title residential and commercial plots.
+- Complete lifecycle handling: feasibility study, architectural blueprinting, regulatory liaison, construction execution, and unit handover.
+
+## Coverage Areas
+
+- **Thiruvallur District**: Thiruvallur Town, Sai Garden, Ikkadu, Veppampattu, Sevvapet, Manavala Nagar, Tiruttani road corridor.
+- **Chennai Metropolitan Area**: Avadi, Ambattur, Poonamallee, Porur, Maduravoyal, Anna Nagar West, Sriperumbudur industrial belt, and Kanchipuram connector.
+
+## Company Information & Contact Coordinates
+
+- **Entity**: KKR Construction & Developers
+- **Founder**: Mr. Mohan Ram
+- **Civil Engineering Partner**: Mr. J. Jayaram
+- **Projects Partner**: Mr. K. Rajesh
+- **Operations Partner**: Mr. J. Parthiban
+- **Registered Address**: Plot No:37, Sai Garden, Thiruvallur, Tamil Nadu – 631203, India
+- **Coordinates**: Latitude 13.1432° N, Longitude 79.9083° E
+- **Primary Phone**: +91 80721 83386
+- **Alternative Contact Numbers**: +91 75503 31045, +91 98948 68457, +91 80989 87756
+- **WhatsApp**: +91 99401 76461 / +91 80721 83386
+- **Email**: kkrconstructiondevelopers@gmail.com
+- **Official Domain**: https://www.kkrconstructiondevelopers.in/
+- **Working Hours**: Monday through Saturday, 9:00 AM – 7:30 PM IST.
+
+## API & Form Submissions for Agents
+
+- **Inquiry Submission Endpoint**: `POST /api/send-enquiry`
+  - Content-Type: `application/json`
+  - Required Fields: `name` (string), `phone` (string), `serviceType` (string)
+  - Optional Fields: `email` (string), `location` (string), `area` (string), `message` (string), `preferredDate` (string), `preferredSlot` (string), `isInspection` (boolean)
+

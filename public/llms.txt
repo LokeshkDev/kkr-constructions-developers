@@ -1,0 +1,40 @@
+# KKR Construction & Developers
+
+> Premier civil engineering and building construction company based in Thiruvallur & Chennai, Tamil Nadu, India. Specializing in residential construction, commercial complexes, and advanced Mivan aluminum formwork monolithic casting technology.
+
+## Core Capabilities & Specializations
+
+- **Mivan Formwork Construction**: Rapid cycle times of 7–10 days per floor, monolithic RCC concrete casting (slab, beam, and walls poured simultaneously), zero external plastering required, high earthquake & seismic resistance, mirror-smooth concrete surface finish.
+- **Residential Construction**: Turnkey luxury villas, independent houses, multi-story duplexes, architectural planning, 3D structural elevation, and Vaastu-compliant layouts.
+- **Commercial Complexes**: Office parks, shopping complexes, IT parks, retail showrooms, RCC framed structures, and heavy load-bearing raft foundations.
+- **Structural Engineering & Foundation Works**: Raft foundation, pile foundation, isolated footings, RCC shear walls, structural soil testing, and seismic compliance.
+- **Joint Venture (JV) Development**: Transparent land development partnerships for landowners in Thiruvallur, Avadi, Poonamallee, Ambattur, and Western Chennai corridors.
+
+## Key Personnel & Leadership
+
+- **Founder & Managing Director**: Mr. Mohan Ram
+- **Civil Engineering Partner**: Mr. J. Jayaram (Chief Civil & Structural Engineer)
+- **Projects & Technical Director**: Mr. K. Rajesh
+- **Operations & Execution Partner**: Mr. J. Parthiban
+
+## Contact & Location
+
+- **Registered Office**: Plot No:37, Sai Garden, Thiruvallur, Tamil Nadu – 631203, India
+- **Phone Numbers**:
+  - +91 80721 83386 (Main Line / Mr. Mohan Ram)
+  - +91 75503 31045
+  - +91 98948 68457
+  - +91 80989 87756
+- **WhatsApp**: +91 99401 76461 / +91 80721 83386
+- **Email**: kkrconstructiondevelopers@gmail.com
+- **Website**: https://www.kkrconstructiondevelopers.in/
+- **Working Hours**: Monday – Saturday: 9:00 AM – 7:30 PM IST (Sundays by appointment)
+
+## Primary Links & Resources
+
+- [Official Website](https://www.kkrconstructiondevelopers.in/): Canonical home page with portfolio, Mivan tech specs, and client testimonials.
+- [Mivan Technology Guide](https://www.kkrconstructiondevelopers.in/#mivan): Detailed breakdown of aluminum shuttering vs conventional brickwork.
+- [Services Portfolio](https://www.kkrconstructiondevelopers.in/#services): Comprehensive catalog of residential, commercial, and structural services.
+- [Contact & Consultation](https://www.kkrconstructiondevelopers.in/#contact): Form for booking on-site civil structural inspections and requesting cost estimates.
+- [Full LLM Specification](/llms-full.txt): Complete documentation, technical parameters, and structured business data for AI agents.
+

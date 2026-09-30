@@ -37,5 +37,28 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# Sitemap Location
+# AI Agent & LLM Crawlers (Agentic Browsing)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap & LLM Navigation
 Sitemap: https://www.kkrconstructiondevelopers.in/sitemap.xml
+# LLMs: https://www.kkrconstructiondevelopers.in/llms.txt
