@@ -1,6 +1,10 @@
 import nodemailer from 'nodemailer';
 import 'dotenv/config';
 
+declare const process: {
+  env: Record<string, string | undefined>;
+};
+
 export interface EnquiryData {
   name: string;
   phone: string;
@@ -418,12 +422,16 @@ export async function sendEnquiryEmails(data: EnquiryData): Promise<{
   error?: string;
 }> {
   const smtpUser = process.env.SMTP_USER || 'kkrconstructiondevelopers@gmail.com';
-  const rawPass = process.env.SMTP_PASS || 'xsccgviewvurcbfu';
+  // Credentials must be supplied through the deployment environment.
+  const rawPass = process.env.SMTP_PASS || '';
   const smtpPass = rawPass.replace(/\s+/g, ''); // Strip any accidental spaces from 16-char app password
-  const adminEmail = process.env.ADMIN_EMAIL || 'kkrconstructiondevelopers@gmail.com, lokeshk2492@gmail.com';
+  const adminEmail = (process.env.ADMIN_EMAIL || 'kkrconstructiondevelopers@gmail.com, lokeshk2492@gmail.com')
+    .split(',')
+    .map((email) => email.trim())
+    .filter(Boolean);
   const companyName = process.env.COMPANY_NAME || 'KKR Construction & Developers';
 
-  if (!smtpPass) {
+  if (!smtpUser || !smtpPass) {
     const errorMsg = 'SMTP_PASS is not configured. Please set your 16-character Google App Password.';
     console.error(`[EmailService Error]: ${errorMsg}`);
     return {
@@ -431,7 +439,7 @@ export async function sendEnquiryEmails(data: EnquiryData): Promise<{
       adminSent: false,
       customerSent: false,
       message: errorMsg,
-      error: 'MISSING_SMTP_PASS',
+      error: smtpUser ? 'MISSING_SMTP_PASS' : 'MISSING_SMTP_USER',
     };
   }
 
@@ -466,7 +474,7 @@ export async function sendEnquiryEmails(data: EnquiryData): Promise<{
 
   try {
     await transporter.sendMail(adminMailOptions);
-    console.log(`[EmailService] Admin notification sent successfully to ${adminEmail}`);
+    console.log(`[EmailService] Admin notification sent successfully to ${adminEmail.join(', ')}`);
   } catch (err: any) {
     console.error('[EmailService Error sending to Admin]:', err);
     let errorMessage = err.message || 'Failed to send admin notification email.';
