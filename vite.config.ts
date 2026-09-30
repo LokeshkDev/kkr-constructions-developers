@@ -27,6 +27,7 @@ function devApiPlugin(): Plugin {
             });
             req.on('end', async () => {
               try {
+                dotenv.config({ override: true });
                 // Dynamically load api/send-enquiry via Vite's ssrLoadModule
                 const mod = await server.ssrLoadModule('/api/send-enquiry.ts');
                 const handler = mod.default;

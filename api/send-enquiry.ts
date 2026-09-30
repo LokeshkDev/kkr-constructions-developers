@@ -15,6 +15,9 @@ export async function sendEnquiryEmails(data: EnquiryData): Promise<{
   message: string;
   error?: string;
 }> {
+  // Always refresh environment variables from .env if updated
+  dotenv.config({ override: true });
+
   const smtpUser = process.env.SMTP_USER || 'kkrconstructiondevelopers@gmail.com';
   const rawPass = process.env.SMTP_PASS || '';
   const smtpPass = rawPass.replace(/\s+/g, ''); // Strip any accidental spaces from 16-char app password
